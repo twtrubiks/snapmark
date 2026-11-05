@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 啟動畫面與圖示用的顏色；App 裡的顏色在 Theme.kt，標註用的八個顏色在 Markup.kt -->
+<resources>
+    <color name="window_light">#FFFAF8F5</color>
+    <color name="window_dark">#FF1B1A19</color>
+    <!-- 粉紅，也是標註預設的顏色 -->
+    <color name="ic_launcher_background">#FFFF4678</color>
+    <color name="ic_arrow">#FFFFFFFF</color>
+</resources>
