@@ -1,0 +1,505 @@
+--------- beginning of main
+11-06 03:49:08.238  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:08.244  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-06 03:49:08.250  5635  5651 I MonitoringInstr: Unstopped activity count: 1
+11-06 03:49:08.301  5635  5651 I chatty  : uid=10067(com.twtrubiks.snapmark) identical 1 line
+11-06 03:49:08.351  5635  5651 I MonitoringInstr: Unstopped activity count: 1
+11-06 03:49:08.375  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@28130a)
+11-06 03:49:08.377  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@28130a)
+11-06 03:49:08.402  5635  5651 I MonitoringInstr: Unstopped activity count: 1
+11-06 03:49:08.453  5635  5651 I MonitoringInstr: Unstopped activity count: 1
+11-06 03:49:08.477  1987  2015 I ndroid.systemu: NativeAlloc concurrent copying GC freed 15875(685KB) AllocSpace objects, 0(0B) LOS objects, 50% free, 4MB/8MB, paused 8.429ms total 27.169ms
+11-06 03:49:08.505  5635  5651 I MonitoringInstr: Unstopped activity count: 1
+11-06 03:49:08.521  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:08.527  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:08.555  5635  5651 I MonitoringInstr: Unstopped activity count: 1
+11-06 03:49:08.601  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:08.606  5635  5651 I MonitoringInstr: Unstopped activity count: 1
+11-06 03:49:08.656  5635  5651 I chatty  : uid=10067(com.twtrubiks.snapmark) identical 1 line
+11-06 03:49:08.707  5635  5651 I MonitoringInstr: Unstopped activity count: 1
+11-06 03:49:08.713  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:08.727  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:08.757  5635  5651 I MonitoringInstr: Unstopped activity count: 1
+11-06 03:49:08.775  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:08.809  5635  5651 I MonitoringInstr: Unstopped activity count: 1
+11-06 03:49:08.841  5635  5657 D EGL_emulation: eglMakeCurrent: 0x71be903a8ac0: ver 3 0 (tinfo 0x71be90346200)
+11-06 03:49:08.864  5635  5651 I MonitoringInstr: Unstopped activity count: 1
+11-06 03:49:08.894  5635  5635 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@1ae0114 in: STOPPED
+11-06 03:49:08.916  5635  5635 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@1ae0114 in: DESTROYED
+11-06 03:49:08.917  5635  5651 I TestRunner: run finished: 1 tests, 0 failed, 0 ignored
+11-06 03:49:08.921  1856  4920 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+11-06 03:49:08.921  1856  4920 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+11-06 03:49:08.921  1856  4920 I OpenGLRenderer: Initialized EGL, version 1.4
+11-06 03:49:08.921  1856  4920 D OpenGLRenderer: Swap behavior 1
+--------- beginning of system
+11-06 03:49:08.927  1856  5023 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@8512bac
+11-06 03:49:08.928  1856  4920 D EGL_emulation: eglCreateContext: 0x71be8a0ff1a0: maj 3 min 0 rcv 3
+11-06 03:49:08.947  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:08.951  1856  5426 I ActivityManager: Force stopping com.twtrubiks.snapmark appid=10067 user=0: finished inst
+11-06 03:49:08.952  1856  5426 I ActivityManager: Killing 5635:com.twtrubiks.snapmark/u0a67 (adj 0): stop com.twtrubiks.snapmark
+11-06 03:49:08.953  1856  1874 W libprocessgroup: kill(-5635, 9) failed: No such process
+11-06 03:49:08.954  1856  5698 W Binder  : Outgoing transactions from this process must be FLAG_ONEWAY
+11-06 03:49:08.954  1856  5698 W Binder  : java.lang.Throwable
+11-06 03:49:08.954  1856  5698 W Binder  : 	at android.os.BinderProxy.transact(Binder.java:1114)
+11-06 03:49:08.954  1856  5698 W Binder  : 	at android.app.IInstrumentationWatcher$Stub$Proxy.instrumentationFinished(IInstrumentationWatcher.java:164)
+11-06 03:49:08.954  1856  5698 W Binder  : 	at com.android.server.am.InstrumentationReporter$MyThread.run(InstrumentationReporter.java:86)
+11-06 03:49:08.955  5625  5625 D AndroidRuntime: Shutting down VM
+11-06 03:49:08.999  1856  1874 W libprocessgroup: kill(-5635, 9) failed: No such process
+11-06 03:49:09.004  1708  1708 I Zygote  : Process 5635 exited due to signal (9)
+11-06 03:49:09.007  1856  4920 D EGL_emulation: eglMakeCurrent: 0x71be8a0ff1a0: ver 3 0 (tinfo 0x71be8a12dea0)
+11-06 03:49:09.014  1856  1879 W ActivityManager: setHasOverlayUi called on unknown pid: 5635
+11-06 03:49:09.044  1856  1874 W libprocessgroup: kill(-5635, 9) failed: No such process
+11-06 03:49:09.044  1856  1874 I libprocessgroup: Successfully killed process cgroup uid 10067 pid 5635 in 91ms
+11-06 03:49:09.241  1856  5426 I ActivityManager: Force stopping com.twtrubiks.snapmark appid=10067 user=0: from pid 5702
+11-06 03:49:09.247  2087  2087 D CarrierSvcBindHelper: No carrier app for: 0
+11-06 03:49:09.375  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@65207e5)
+11-06 03:49:09.375  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@65207e5)
+11-06 03:49:09.524  1856  5426 I ActivityManager: Force stopping com.twtrubiks.snapmark appid=10067 user=0: clear data
+11-06 03:49:09.525  1856  1871 I ActivityManager: Force stopping com.twtrubiks.snapmark appid=10067 user=-1: clearApplicationUserData
+11-06 03:49:09.528  1856  5426 D ZenLog  : config: removeAutomaticZenRules,ZenModeConfig[user=0,allowAlarms=true,allowMedia=true,allowSystem=false,allowReminders=false,allowEvents=false,allowCalls=true,allowRepeatCallers=true,allowMessages=false,allowCallsFrom=stars,allowMessagesFrom=contacts,suppressedVisualEffects=511,areChannelsBypassingDnd=false,automaticRules={EVENTS_DEFAULT_RULE=ZenRule[enabled=false,snoozing=false,name=Event,zenMode=ZEN_MODE_IMPORTANT_INTERRUPTIONS,conditionId=condition://android/event?userId=-10000&calendar=&reply=1,condition=Condition[id=condition://android/event?userId=-10000&calendar=&reply=1,summary=...,line1=...,line2=...,icon=0,state=STATE_FALSE,flags=2],component=ComponentInfo{android/com.android.server.notification.EventConditionProvider},id=EVENTS_DEFAULT_RULE,creationTime=1793936407461,enabler=null], EVERY_NIGHT_DEFAULT_RULE=ZenRule[enabled=false,snoozing=false,name=Sleeping,zenMode=ZEN_MODE_IMPORTANT_INTERRUPTIONS,conditionId=condition://android/schedule?days=1.2.3.4.5.6.7&start=22.0&end=7.0&exitAtAlarm=true,condition=Condition[id=condition://android/schedule?days=1.2.3.4.5.6.7&start=22.0&end=7.0&exitAtAlarm=true,summary=...,line1=...,line2=...,icon=0,state=STATE_TRUE,flags=2],component=ComponentInfo{android/com.android.server.notification.ScheduleConditionProvider},id=EVERY_NIGHT_DEFAULT_RULE,creationTime=1793936407460,enabler=null]},manualRule=null],Diff[]
+11-06 03:49:09.529  1856  1856 D ZenLog  : set_zen_mode: off,removeAutomaticZenRules
+11-06 03:49:09.529  1856  5426 I ConditionProviders: Disallowing condition provider com.twtrubiks.snapmark
+11-06 03:49:09.535  1856  1974 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+11-06 03:49:09.542  1714  1714 I keystore: clear_uid 10067
+11-06 03:49:09.625  2087  2087 D CarrierSvcBindHelper: No carrier app for: 0
+11-06 03:49:09.635  1856  1866 I system_server: NativeAlloc concurrent copying GC freed 1768(364KB) AllocSpace objects, 4(144KB) LOS objects, 42% free, 6MB/11MB, paused 555us total 115.875ms
+11-06 03:49:09.870  1856  1871 I ActivityManager: Force stopping com.twtrubiks.snapmark appid=10067 user=-1: installPackageLI
+11-06 03:49:09.924  1856  1884 I PackageManager: Update package com.twtrubiks.snapmark code path from /data/app/com.twtrubiks.snapmark-MornXAWPnbsuggLKfaI69Q== to /data/app/com.twtrubiks.snapmark-nO7M8r7hMxcESXXntROnGA==; Retain data and using new
+11-06 03:49:09.924  1856  1884 I PackageManager: Update package com.twtrubiks.snapmark resource path from /data/app/com.twtrubiks.snapmark-MornXAWPnbsuggLKfaI69Q== to /data/app/com.twtrubiks.snapmark-nO7M8r7hMxcESXXntROnGA==; Retain data and using new
+11-06 03:49:09.983  1713  1923 D installd: Detected label change from u:object_r:app_data_file:s0 to u:object_r:app_data_file:s0:c67,c256,c512,c768 at /data/data/com.twtrubiks.snapmark/cache; running recursive restorecon
+11-06 03:49:09.983  1713  1923 D installd: Detected label change from u:object_r:app_data_file:s0 to u:object_r:app_data_file:s0:c67,c256,c512,c768 at /data/data/com.twtrubiks.snapmark/code_cache; running recursive restorecon
+11-06 03:49:09.983  1713  1923 D installd: Detected label change from u:object_r:app_data_file:s0 to u:object_r:app_data_file:s0:c67,c256,c512,c768 at /data/user_de/0/com.twtrubiks.snapmark/cache; running recursive restorecon
+11-06 03:49:09.983  1713  1923 D installd: Detected label change from u:object_r:app_data_file:s0 to u:object_r:app_data_file:s0:c67,c256,c512,c768 at /data/user_de/0/com.twtrubiks.snapmark/code_cache; running recursive restorecon
+11-06 03:49:09.992  1856  1884 I PackageManager.DexOptimizer: Running dexopt (dexoptNeeded=1) on: /data/app/com.twtrubiks.snapmark-nO7M8r7hMxcESXXntROnGA==/base.apk pkg=com.twtrubiks.snapmark isa=x86_64 dexoptFlags=boot_complete,profile_guided,public,enable_hidden_api_checks targetFilter=speed-profile oatDir=/data/app/com.twtrubiks.snapmark-nO7M8r7hMxcESXXntROnGA==/oat classLoaderContext=PCL[]
+11-06 03:49:09.993  1713  1923 V installed: DexInv: --- BEGIN '/data/app/com.twtrubiks.snapmark-nO7M8r7hMxcESXXntROnGA==/base.apk' ---
+11-06 03:49:10.006  5721  5721 W dex2oat : Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:10.007  5721  5721 I dex2oat : /system/bin/dex2oat --input-vdex-fd=-1 --output-vdex-fd=10 --compiler-filter=speed-profile --classpath-dir=/data/app/com.twtrubiks.snapmark-nO7M8r7hMxcESXXntROnGA== --class-loader-context=PCL[] --generate-mini-debug-info --compact-dex-level=none --compilation-reason=install
+11-06 03:49:10.008  5721  5721 W dex2oat : Could not reserve sentinel fault page
+11-06 03:49:10.188  5721  5721 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getAmbientShadowColor()I (dark greylist, linking)
+11-06 03:49:10.188  5721  5721 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getSpotShadowColor()I (dark greylist, linking)
+11-06 03:49:10.188  5721  5721 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setAmbientShadowColor(I)Z (dark greylist, linking)
+11-06 03:49:10.189  5721  5721 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setSpotShadowColor(I)Z (dark greylist, linking)
+11-06 03:49:10.375  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@46240d1)
+11-06 03:49:10.375  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@46240d1)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getScaleX()F (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setScaleX(F)Z (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getScaleY()F (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setScaleY(F)Z (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getTranslationX()F (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setTranslationX(F)Z (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getTranslationY()F (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setTranslationY(F)Z (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getElevation()F (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setElevation(F)Z (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getRotation()F (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setRotation(F)Z (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getRotationX()F (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setRotationX(F)Z (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getRotationY()F (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setRotationY(F)Z (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getCameraDistance()F (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setCameraDistance(F)Z (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getPivotX()F (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setPivotX(F)Z (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getPivotY()F (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setPivotY(F)Z (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getClipToOutline()Z (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setClipToOutline(Z)Z (dark greylist, linking)
+11-06 03:49:10.480  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getAlpha()F (dark greylist, linking)
+11-06 03:49:10.481  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setAlpha(F)Z (dark greylist, linking)
+11-06 03:49:10.481  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->offsetTopAndBottom(I)Z (dark greylist, linking)
+11-06 03:49:10.481  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setLayerType(I)Z (dark greylist, linking)
+11-06 03:49:10.481  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->hasOverlappingRendering()Z (dark greylist, linking)
+11-06 03:49:10.481  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setScaleY(F)Z (dark greylist, linking)
+11-06 03:49:10.481  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->getMatrix(Landroid/graphics/Matrix;)V (dark greylist, linking)
+11-06 03:49:10.481  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setPivotX(F)Z (dark greylist, linking)
+11-06 03:49:10.481  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setPivotY(F)Z (dark greylist, linking)
+11-06 03:49:10.481  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setLayerPaint(Landroid/graphics/Paint;)Z (dark greylist, linking)
+11-06 03:49:10.481  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setCameraDistance(F)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setRotationX(F)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setLayerType(I)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setLayerPaint(Landroid/graphics/Paint;)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setLayerType(I)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setLayerPaint(Landroid/graphics/Paint;)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setLayerType(I)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setLayerPaint(Landroid/graphics/Paint;)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setPivotX(F)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setPivotY(F)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setPivotX(F)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setPivotY(F)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setClipToOutline(Z)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setClipToOutline(Z)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setRotationY(F)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setAlpha(F)Z (dark greylist, linking)
+11-06 03:49:10.482  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setElevation(F)Z (dark greylist, linking)
+11-06 03:49:10.483  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setRotation(F)Z (dark greylist, linking)
+11-06 03:49:10.483  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setTranslationY(F)Z (dark greylist, linking)
+11-06 03:49:10.483  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setOutline(Landroid/graphics/Outline;)Z (dark greylist, linking)
+11-06 03:49:10.483  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setScaleX(F)Z (dark greylist, linking)
+11-06 03:49:10.483  5721  5723 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setTranslationX(F)Z (dark greylist, linking)
+11-06 03:49:10.492  5721  5723 W dex2oat : Accessing hidden method Landroid/graphics/Canvas;->drawPatch(Landroid/graphics/NinePatch;Landroid/graphics/Rect;Landroid/graphics/Paint;)V (dark greylist, linking)
+11-06 03:49:10.492  5721  5723 W dex2oat : Accessing hidden method Landroid/graphics/Canvas;->drawPatch(Landroid/graphics/NinePatch;Landroid/graphics/RectF;Landroid/graphics/Paint;)V (dark greylist, linking)
+11-06 03:49:10.520  5721  5721 W dex2oat : Accessing hidden method Landroid/graphics/Paint;->getTextBounds(Ljava/lang/CharSequence;IILandroid/graphics/Rect;)V (dark greylist, linking)
+11-06 03:49:10.785  1856  1939 E memtrack: Couldn't load memtrack module
+11-06 03:49:10.785  1856  1939 W android.os.Debug: failed to get memory consumption info: -1
+11-06 03:49:10.960  1553  1625 W audio_hw_generic: Not supplying enough data to HAL, expected position 8391841 , only wrote 8239680
+11-06 03:49:11.063  5721  5721 W dex2oat : Accessing hidden method Landroid/graphics/Canvas;->drawPatch(Landroid/graphics/NinePatch;Landroid/graphics/Rect;Landroid/graphics/Paint;)V (dark greylist, linking)
+11-06 03:49:11.063  5721  5721 W dex2oat : Accessing hidden method Landroid/graphics/Canvas;->drawPatch(Landroid/graphics/NinePatch;Landroid/graphics/RectF;Landroid/graphics/Paint;)V (dark greylist, linking)
+11-06 03:49:11.063  5721  5721 W dex2oat : Accessing hidden method Landroid/graphics/Paint;->getTextBounds(Ljava/lang/CharSequence;IILandroid/graphics/Rect;)V (dark greylist, linking)
+11-06 03:49:11.064  5721  5721 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setLayerPaint(Landroid/graphics/Paint;)Z (dark greylist, linking)
+11-06 03:49:11.064  5721  5721 W dex2oat : Accessing hidden method Landroid/view/RenderNode;->setLayerType(I)Z (dark greylist, linking)
+11-06 03:49:11.081  5721  5721 I dex2oat : Explicit concurrent copying GC freed 14598(2MB) AllocSpace objects, 0(0B) LOS objects, 99% free, 728B/1536KB, paused 468us total 3.197ms
+11-06 03:49:11.133  5721  5721 I dex2oat : dex2oat took 1.127s (1.727s cpu) (threads: 2) arena alloc=92KB (94696B) java alloc=16KB (17112B) native alloc=4MB (4587560B) free=2MB (2228184B)
+11-06 03:49:11.137  1713  1923 V installed: DexInv: --- END '/data/app/com.twtrubiks.snapmark-nO7M8r7hMxcESXXntROnGA==/base.apk' (success) ---
+11-06 03:49:11.138  1856  1884 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-06 03:49:11.138  1856  1884 D PackageManager: Clear ephemeral installer activity
+11-06 03:49:11.157  1856  1884 I system_server: Explicit concurrent copying GC freed 39867(2MB) AllocSpace objects, 24(1056KB) LOS objects, 42% free, 5MB/9MB, paused 487us total 19.108ms
+11-06 03:49:11.161  1713  1923 E         : Couldn't opendir /data/app/vmdl814246436.tmp: No such file or directory
+11-06 03:49:11.161  1713  1923 E installd: Failed to delete /data/app/vmdl814246436.tmp: No such file or directory
+11-06 03:49:11.162  1856  1884 I ActivityManager: Force stopping com.twtrubiks.snapmark appid=10067 user=0: pkg removed
+11-06 03:49:11.183  1856  1930 I InputReader: Reconfiguring input devices.  changes=0x00000010
+11-06 03:49:11.193  1856  1939 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.twtrubiks.snapmark flg=0x4000010 (has extras) } to com.android.musicfx/.Compatibility$Receiver
+11-06 03:49:11.199  1856  5426 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.twtrubiks.snapmark flg=0x4000010 (has extras) } to com.android.musicfx/.Compatibility$Receiver
+11-06 03:49:11.210  1856  1856 I Telecom : DefaultDialerCache: Refreshing default dialer for user 0: now com.android.dialer: DDC.oR@AL0
+11-06 03:49:11.233  1856  1871 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:com.twtrubiks.snapmark flg=0x4000010 (has extras) } to com.android.musicfx/.Compatibility$Receiver
+11-06 03:49:11.236  1856  1870 D AutofillManagerServiceImpl: Reset component for user 0 ()
+11-06 03:49:11.236  1856  1870 D FieldClassificationStrategy: reset(): service is not bound. Do nothing.
+11-06 03:49:11.236  1856  1870 W VoiceInteractionManagerService: no available voice recognition services found for user 0
+11-06 03:49:11.237  1856  1872 D AutofillUI: destroySaveUiUiThread(): already destroyed
+11-06 03:49:11.259  1856  2141 I ActivityManager: START u0 {flg=0x10000000 cmp=com.twtrubiks.snapmark/.MainActivity} from uid 2000
+11-06 03:49:11.183  1856  1930 I chatty  : uid=1000(system) InputReader identical 1 line
+11-06 03:49:11.233  1856  1930 I InputReader: Reconfiguring input devices.  changes=0x00000010
+11-06 03:49:11.278  2087  2087 D CarrierSvcBindHelper: No carrier app for: 0
+11-06 03:49:11.280  2087  2087 D CarrierSvcBindHelper: No carrier app for: 0
+11-06 03:49:11.284  2087  2087 D CarrierConfigLoader: mHandler: 9 phoneId: 0
+11-06 03:49:11.376  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@330c76c)
+11-06 03:49:11.376  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@330c76c)
+11-06 03:49:11.400  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-06 03:49:11.490  1856  1873 I ActivityManager: Start proc 5735:com.twtrubiks.snapmark/u0a67 for activity com.twtrubiks.snapmark/.MainActivity
+11-06 03:49:11.503  5735  5735 W rubiks.snapmar: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:11.563  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-06 03:49:11.656  5735  5735 D OpenGLRenderer: Skia GL Pipeline
+11-06 03:49:11.667  1707  1807 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-06 03:49:12.159  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-06 03:49:12.161  5735  5752 D         : HostConnection::get() New Host Connection established 0x71bea7f47aa0, tid 5752
+11-06 03:49:12.170  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-06 03:49:12.171  1565  1609 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-06 03:49:12.192  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->getScaleX()F (dark greylist, linking)
+11-06 03:49:12.192  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setScaleY(F)Z (dark greylist, linking)
+11-06 03:49:12.195  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->getMatrix(Landroid/graphics/Matrix;)V (dark greylist, linking)
+11-06 03:49:12.195  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setPivotX(F)Z (dark greylist, linking)
+11-06 03:49:12.195  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setLayerPaint(Landroid/graphics/Paint;)Z (dark greylist, linking)
+11-06 03:49:12.195  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setCameraDistance(F)Z (dark greylist, linking)
+11-06 03:49:12.196  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setRotationX(F)Z (dark greylist, linking)
+11-06 03:49:12.196  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setLayerType(I)Z (dark greylist, linking)
+11-06 03:49:12.196  5735  5735 I chatty  : uid=10067(com.twtrubiks.snapmark) identical 1 line
+11-06 03:49:12.197  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setLayerType(I)Z (dark greylist, linking)
+11-06 03:49:12.197  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setPivotX(F)Z (dark greylist, linking)
+11-06 03:49:12.197  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setPivotX(F)Z (dark greylist, linking)
+11-06 03:49:12.197  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setClipToOutline(Z)Z (dark greylist, linking)
+11-06 03:49:12.197  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setClipToOutline(Z)Z (dark greylist, linking)
+11-06 03:49:12.197  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setRotationY(F)Z (dark greylist, linking)
+11-06 03:49:12.197  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setAlpha(F)Z (dark greylist, linking)
+11-06 03:49:12.197  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setElevation(F)Z (dark greylist, linking)
+11-06 03:49:12.198  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setRotation(F)Z (dark greylist, linking)
+11-06 03:49:12.198  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setTranslationY(F)Z (dark greylist, linking)
+11-06 03:49:12.198  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setOutline(Landroid/graphics/Outline;)Z (dark greylist, linking)
+11-06 03:49:12.198  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setScaleX(F)Z (dark greylist, linking)
+11-06 03:49:12.199  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setTranslationX(F)Z (dark greylist, linking)
+11-06 03:49:12.199  5735  5735 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->getScaleX()F (dark greylist, linking)
+11-06 03:49:12.230  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:12.261  5735  5752 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+11-06 03:49:12.261  5735  5752 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+11-06 03:49:12.261  5735  5752 I OpenGLRenderer: Initialized EGL, version 1.4
+11-06 03:49:12.261  5735  5752 D OpenGLRenderer: Swap behavior 1
+11-06 03:49:12.267  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:12.267  2529  2604 D EGL_emulation: eglMakeCurrent: 0x71bea183ea80: ver 3 0 (tinfo 0x71bea1919ee0)
+11-06 03:49:12.271  5735  5752 D EGL_emulation: eglCreateContext: 0x71bea7fe7e20: maj 3 min 0 rcv 3
+11-06 03:49:12.283  5735  5752 D EGL_emulation: eglMakeCurrent: 0x71bea7fe7e20: ver 3 0 (tinfo 0x71be9fff4bc0)
+11-06 03:49:12.286  1707  1807 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-06 03:49:12.377  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@aaae39c)
+11-06 03:49:12.378  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@aaae39c)
+11-06 03:49:12.426  5735  5735 I Choreographer: Skipped 36 frames!  The application may be doing too much work on its main thread.
+11-06 03:49:12.464  5735  5752 D EGL_emulation: eglMakeCurrent: 0x71bea7fe7e20: ver 3 0 (tinfo 0x71be9fff4bc0)
+11-06 03:49:13.376  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@197497a)
+11-06 03:49:13.377  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@197497a)
+11-06 03:49:14.376  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@429a52b)
+11-06 03:49:14.377  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@429a52b)
+11-06 03:49:14.753  5735  5752 I OpenGLRenderer: Davey! duration=2924ms; Flags=1, IntendedVsync=572558399257, Vsync=573158399233, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=573169486260, AnimationStart=573169530440, PerformTraversalsStart=573169561900, DrawStart=573175351710, SyncQueued=573194653060, SyncStart=573208335920, IssueDrawCommandsStart=573208397070, SwapBuffers=575369274990, FrameCompleted=575496797240, DequeueBufferDuration=66000, QueueBufferDuration=365000, 
+11-06 03:49:14.797  1856  1879 I ActivityManager: Displayed com.twtrubiks.snapmark/.MainActivity: +3s317ms
+11-06 03:49:14.798  5735  5735 I Choreographer: Skipped 140 frames!  The application may be doing too much work on its main thread.
+11-06 03:49:14.850  5735  5752 I OpenGLRenderer: Davey! duration=2400ms; Flags=0, IntendedVsync=573192851251, Vsync=575526184491, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=575541761490, AnimationStart=575541804620, PerformTraversalsStart=575552389260, DrawStart=575553172450, SyncQueued=575553190460, SyncStart=575553253500, IssueDrawCommandsStart=575553412530, SwapBuffers=575554649660, FrameCompleted=575593909290, DequeueBufferDuration=58000, QueueBufferDuration=1679000, 
+11-06 03:49:14.857  1856  1974 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+11-06 03:49:14.990  1707  1827 W SurfaceFlinger: Attempting to set client state on removed layer: Splash Screen com.twtrubiks.snapmark#0
+11-06 03:49:14.990  1707  1827 W SurfaceFlinger: Attempting to destroy on removed layer: Splash Screen com.twtrubiks.snapmark#0
+11-06 03:49:15.027  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:15.148  1987  2247 I chatty  : uid=10013(com.android.systemui) RenderThread identical 4 lines
+11-06 03:49:15.182  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:15.377  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@72395a0)
+11-06 03:49:15.377  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@72395a0)
+11-06 03:49:16.377  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b7da559)
+11-06 03:49:16.377  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b7da559)
+11-06 03:49:17.377  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8b6b51e)
+11-06 03:49:17.378  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8b6b51e)
+11-06 03:49:17.684  5735  5760 D ProfileInstaller: Installing profile for com.twtrubiks.snapmark
+11-06 03:49:17.856  1707  2248 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-06 03:49:17.856  1565  1609 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-06 03:49:17.882  5763  5763 D         : HostConnection::get() New Host Connection established 0x7de29b82ee40, tid 5763
+11-06 03:49:18.225  5765  5765 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:18.228  5765  5765 I app_process: RelocateImage: /system/bin/patchoat --input-image-location=/system/framework/boot.art --output-image-directory=/data/local/tmp/dalvik-cache/x86_64 --instruction-set=x86_64 --base-offset-delta=14143488
+11-06 03:49:18.377  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@42e71ff)
+11-06 03:49:18.378  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@42e71ff)
+11-06 03:49:18.441  5765  5765 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:18.443  5765  5765 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:18.444  5765  5765 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:18.460  5765  5765 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-06 03:49:18.467  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:19.377  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@115052a)
+11-06 03:49:19.377  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@115052a)
+11-06 03:49:19.492  5765  5765 W AccessibilityNodeInfoDumper: Fetch time: 3ms
+11-06 03:49:19.492  1856  2141 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@8bc6bcc
+11-06 03:49:19.493  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:19.500  5765  5765 D AndroidRuntime: Shutting down VM
+11-06 03:49:19.520  5765  5765 W app_process: Suspending all threads took: 7.262ms
+11-06 03:49:19.521  5735  5740 I rubiks.snapmar: Compiler allocated 4MB to compile p1 rh0.m(int)
+11-06 03:49:19.661  5781  5781 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:19.693  5781  5781 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:19.694  5781  5781 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:19.694  5781  5781 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:19.707  5781  5781 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-06 03:49:20.377  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5110cda)
+11-06 03:49:20.378  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5110cda)
+11-06 03:49:20.731  5781  5781 W AccessibilityNodeInfoDumper: Fetch time: 3ms
+11-06 03:49:19.712  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:20.732  1856  2494 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@8185ffc
+11-06 03:49:20.732  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:20.736  5781  5781 D AndroidRuntime: Shutting down VM
+11-06 03:49:20.741  1755  1776 D hwcomposer: hw_composer sent 18 syncs in 60s
+11-06 03:49:20.853  5795  5795 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:20.883  5795  5795 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:20.884  5795  5795 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:20.898  5795  5795 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-06 03:49:20.900  5795  5795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=900.0, y[0]=2868.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=581642, downTime=581642, deviceId=0, source=0x1002 }
+11-06 03:49:20.906  5795  5795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=900.0, y[0]=2868.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=581642, downTime=581642, deviceId=0, source=0x1002 }
+11-06 03:49:20.910  5795  5795 D AndroidRuntime: Shutting down VM
+11-06 03:49:20.910  1553  3128 W audio_hw_generic: Not supplying enough data to HAL, expected position 8239742 , only wrote 8239680
+11-06 03:49:21.377  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f897fe8)
+11-06 03:49:21.378  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f897fe8)
+11-06 03:49:22.024  5805  5805 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:22.061  5805  5805 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:22.062  5805  5805 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:22.063  5805  5805 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:22.078  5805  5805 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-06 03:49:22.378  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@171f6e7)
+11-06 03:49:22.378  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@171f6e7)
+11-06 03:49:23.040  5735  5752 I OpenGLRenderer: Davey! duration=1777ms; Flags=0, IntendedVsync=581722511629, Vsync=581889178289, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=581899550950, AnimationStart=581899581410, PerformTraversalsStart=581910184960, DrawStart=581910285890, SyncQueued=581911226880, SyncStart=582195439520, IssueDrawCommandsStart=582195546470, SwapBuffers=583316045480, FrameCompleted=583783923330, DequeueBufferDuration=100000, QueueBufferDuration=448000, 
+11-06 03:49:23.047  5735  5735 I Choreographer: Skipped 93 frames!  The application may be doing too much work on its main thread.
+11-06 03:49:22.103  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:23.115  1856  2141 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@7f45601
+11-06 03:49:23.117  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:23.119  5805  5805 D AndroidRuntime: Shutting down VM
+11-06 03:49:23.189  5735  5752 I OpenGLRenderer: Davey! duration=1642ms; Flags=0, IntendedVsync=582231148253, Vsync=583781148191, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=583791190690, AnimationStart=583791236340, PerformTraversalsStart=583791270470, DrawStart=583791526130, SyncQueued=583795455060, SyncStart=583854062370, IssueDrawCommandsStart=583854912090, SwapBuffers=583872031730, FrameCompleted=583932411130, DequeueBufferDuration=4254000, QueueBufferDuration=3743000, 
+11-06 03:49:23.378  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@64f513d)
+11-06 03:49:23.378  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@64f513d)
+11-06 03:49:24.151  1553  1625 W audio_hw_generic: Not supplying enough data to HAL, expected position 8548703 , only wrote 8395200
+11-06 03:49:24.378  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@cb45d32)
+11-06 03:49:24.378  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@cb45d32)
+11-06 03:49:25.238  5817  5817 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:25.269  5817  5817 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:25.270  5817  5817 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:25.271  5817  5817 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:25.284  5817  5817 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-06 03:49:25.378  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@864c439)
+11-06 03:49:25.379  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@864c439)
+11-06 03:49:26.321  5817  5817 W AccessibilityNodeInfoDumper: Fetch time: 7ms
+11-06 03:49:25.289  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:26.321  1856  5426 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@3dd1a83
+11-06 03:49:26.322  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:26.328  5817  5817 D AndroidRuntime: Shutting down VM
+11-06 03:49:26.380  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@14cdbdf)
+11-06 03:49:26.380  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@14cdbdf)
+11-06 03:49:26.448  5831  5831 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:26.480  5831  5831 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:26.481  5831  5831 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:26.494  5831  5831 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-06 03:49:26.497  5831  5831 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=720.0, y[0]=2234.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=587238, downTime=587238, deviceId=0, source=0x1002 }
+11-06 03:49:26.500  5831  5831 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=720.0, y[0]=2234.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=587238, downTime=587238, deviceId=0, source=0x1002 }
+11-06 03:49:26.505  5831  5831 D AndroidRuntime: Shutting down VM
+11-06 03:49:26.507  1553  3128 W audio_hw_generic: Not supplying enough data to HAL, expected position 8395371 , only wrote 8395200
+11-06 03:49:27.379  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@631c02c)
+11-06 03:49:27.380  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@631c02c)
+11-06 03:49:28.380  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9c46af5)
+11-06 03:49:28.380  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9c46af5)
+11-06 03:49:28.598  5842  5842 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:28.630  5842  5842 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:28.632  5842  5842 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:28.632  5842  5842 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:28.646  5842  5842 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-06 03:49:29.380  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@710b318)
+11-06 03:49:29.380  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@710b318)
+11-06 03:49:29.675  5842  5842 W AccessibilityNodeInfoDumper: Fetch time: 4ms
+11-06 03:49:28.653  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:29.675  1856  5023 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@fb6608a
+11-06 03:49:29.677  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:29.681  5842  5842 D AndroidRuntime: Shutting down VM
+11-06 03:49:29.718  1553  1625 W audio_hw_generic: Not supplying enough data to HAL, expected position 8701403 , only wrote 8549280
+11-06 03:49:29.812  5856  5856 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:29.843  5856  5856 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:29.845  5856  5856 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:29.860  5856  5856 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-06 03:49:29.863  5856  5856 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=432.0, y[0]=1883.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=590604, downTime=590604, deviceId=0, source=0x1002 }
+11-06 03:49:29.868  5856  5856 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=432.0, y[0]=1883.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=590604, downTime=590604, deviceId=0, source=0x1002 }
+11-06 03:49:29.884  5856  5856 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=466.56, y[0]=1850.9, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=590628, downTime=590628, deviceId=0, source=0x1002 }
+11-06 03:49:29.907  5856  5856 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=499.68, y[0]=1820.1375, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=590651, downTime=590651, deviceId=0, source=0x1002 }
+11-06 03:49:29.967  5856  5856 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=584.64, y[0]=1741.225, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=590710, downTime=590710, deviceId=0, source=0x1002 }
+11-06 03:49:30.065  5856  5856 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=727.19995, y[0]=1608.8125, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=590809, downTime=590809, deviceId=0, source=0x1002 }
+11-06 03:49:30.161  5856  5856 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=865.44, y[0]=1480.4125, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=590905, downTime=590905, deviceId=0, source=0x1002 }
+11-06 03:49:30.261  5856  5856 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=1008.0, y[0]=1348.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=591004, downTime=591004, deviceId=0, source=0x1002 }
+11-06 03:49:30.374  5856  5856 D AndroidRuntime: Shutting down VM
+11-06 03:49:30.386  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@aa1fb56)
+11-06 03:49:30.387  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@aa1fb56)
+11-06 03:49:31.386  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c1067d7)
+11-06 03:49:31.387  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c1067d7)
+11-06 03:49:31.444  1707  2248 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-06 03:49:31.444  1565  1609 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-06 03:49:31.466  5868  5868 D         : HostConnection::get() New Host Connection established 0x7bfed302ee40, tid 5868
+11-06 03:49:31.801  5870  5870 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:31.832  5870  5870 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:31.833  5870  5870 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:31.834  5870  5870 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:31.847  5870  5870 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-06 03:49:32.387  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@eda76e2)
+11-06 03:49:32.387  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@eda76e2)
+11-06 03:49:32.876  5870  5870 W AccessibilityNodeInfoDumper: Fetch time: 6ms
+11-06 03:49:31.853  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:32.877  1856  5426 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@9e9e8c4
+11-06 03:49:32.879  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:32.886  5870  5870 D AndroidRuntime: Shutting down VM
+11-06 03:49:33.012  5884  5884 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:33.045  5884  5884 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:33.046  5884  5884 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:33.060  5884  5884 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-06 03:49:33.062  5884  5884 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=777.0, y[0]=182.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=593803, downTime=593803, deviceId=0, source=0x1002 }
+11-06 03:49:33.065  5884  5884 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=777.0, y[0]=182.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=593803, downTime=593803, deviceId=0, source=0x1002 }
+11-06 03:49:33.067  1856  5023 I ActivityManager: START u0 {act=android.content.pm.action.REQUEST_PERMISSIONS pkg=com.android.packageinstaller cmp=com.android.packageinstaller/.permission.ui.GrantPermissionsActivity (has extras)} from uid 10067
+11-06 03:49:33.071  1553  3128 W audio_hw_generic: Not supplying enough data to HAL, expected position 8549448 , only wrote 8549280
+11-06 03:49:33.080  5884  5884 D AndroidRuntime: Shutting down VM
+11-06 03:49:33.092  2918  2918 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@8befb10
+11-06 03:49:33.098  1856  1870 E memtrack: Couldn't load memtrack module
+11-06 03:49:33.098  1856  1870 W android.os.Debug: failed to get memory consumption info: -1
+11-06 03:49:33.248  1565  1609 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 16625664
+11-06 03:49:33.274  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 16625664
+11-06 03:49:33.350  1565  1609 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 16625664
+11-06 03:49:33.390  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@64f4c7)
+11-06 03:49:33.391  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@64f4c7)
+11-06 03:49:33.441  2918  4794 D EGL_emulation: eglMakeCurrent: 0x71be9e539780: ver 3 0 (tinfo 0x71be9fff4c60)
+11-06 03:49:33.712  1856  1879 I ActivityManager: Displayed com.android.packageinstaller/.permission.ui.GrantPermissionsActivity: +471ms
+11-06 03:49:33.754  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:33.769  2918  4794 D EGL_emulation: eglMakeCurrent: 0x71be9e539780: ver 3 0 (tinfo 0x71be9fff4c60)
+11-06 03:49:33.774  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:33.790  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 16617472
+11-06 03:49:33.820  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:33.865  2918  4794 D EGL_emulation: eglMakeCurrent: 0x71be9e539780: ver 3 0 (tinfo 0x71be9fff4c60)
+11-06 03:49:33.885  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 16617472
+11-06 03:49:33.886  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:33.903  1987  2247 I chatty  : uid=10013(com.android.systemui) RenderThread identical 1 line
+11-06 03:49:33.951  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:34.389  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8b4cc51)
+11-06 03:49:34.389  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8b4cc51)
+11-06 03:49:34.764  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 16617472
+11-06 03:49:35.316  5895  5895 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:35.353  5895  5895 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:35.354  5895  5895 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:35.354  5895  5895 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:35.367  5895  5895 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-06 03:49:35.374  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:35.389  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8711924)
+11-06 03:49:35.391  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8711924)
+11-06 03:49:36.296  1553  1625 W audio_hw_generic: Not supplying enough data to HAL, expected position 8856934 , only wrote 8704080
+11-06 03:49:36.380  1856  5023 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@2e1dcb6
+11-06 03:49:36.381  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:36.386  5895  5895 D AndroidRuntime: Shutting down VM
+11-06 03:49:36.389  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4270e42)
+11-06 03:49:36.389  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4270e42)
+11-06 03:49:37.390  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4055e53)
+11-06 03:49:37.390  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4055e53)
+11-06 03:49:38.390  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@38a390)
+11-06 03:49:38.390  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@38a390)
+11-06 03:49:38.473  5907  5907 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:38.503  5907  5907 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:38.504  5907  5907 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:38.505  5907  5907 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:38.517  5907  5907 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-06 03:49:39.390  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@47d8caf)
+11-06 03:49:39.391  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@47d8caf)
+11-06 03:49:39.539  5907  5907 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@137e3; boundsInParent: Rect(0, 0 - 0, 189); boundsInScreen: Rect(307, 1624 - 307, 1813); packageName: com.android.packageinstaller; className: android.widget.LinearLayout; text: null; error: null; maxTextLength: -1; contentDescription: null; tooltipText: null; viewIdResName: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]
+11-06 03:49:39.539  5907  5907 W AccessibilityNodeInfoDumper: Fetch time: 4ms
+11-06 03:49:38.525  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:39.540  1856  2141 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@b53b489
+11-06 03:49:39.541  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:39.548  5907  5907 D AndroidRuntime: Shutting down VM
+11-06 03:49:39.694  5921  5921 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:39.726  5921  5921 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:39.727  5921  5921 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:39.741  5921  5921 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-06 03:49:39.743  5921  5921 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=1045.0, y[0]=1718.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=600484, downTime=600484, deviceId=0, source=0x1002 }
+11-06 03:49:39.744  5921  5921 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=1045.0, y[0]=1718.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=600484, downTime=600484, deviceId=0, source=0x1002 }
+11-06 03:49:39.745  5921  5921 D AndroidRuntime: Shutting down VM
+11-06 03:49:39.754  1511  1511 D vold    : Remounting 10067 as mode read
+11-06 03:49:39.757  1856  1856 I GnssLocationProvider: WakeLock acquired by sendMessage(SET_REQUEST, 0, com.android.server.location.GnssLocationProvider$GpsRequest@88c239a)
+11-06 03:49:39.757  1511  1511 D vold    : Found matching PID 5735
+11-06 03:49:39.761  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(SET_REQUEST, 0, com.android.server.location.GnssLocationProvider$GpsRequest@88c239a)
+11-06 03:49:39.761  1553  3128 W audio_hw_generic: Not supplying enough data to HAL, expected position 8704354 , only wrote 8704080
+11-06 03:49:39.878  1511  1511 D vold    : Remounting 10067 as mode write
+11-06 03:49:39.880  1856  1856 I GnssLocationProvider: WakeLock acquired by sendMessage(SET_REQUEST, 0, com.android.server.location.GnssLocationProvider$GpsRequest@e3554a8)
+11-06 03:49:39.881  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(SET_REQUEST, 0, com.android.server.location.GnssLocationProvider$GpsRequest@e3554a8)
+11-06 03:49:39.885  1511  1511 D vold    : Found matching PID 5735
+11-06 03:49:40.142  1856  1879 W system_server: Long monitor contention with owner Binder:1856_F (5023) at void com.android.server.wm.WindowManagerService.continueSurfaceLayout()(WindowManagerService.java:2882) waiters=0 in void com.android.server.wm.WindowManagerService$H.handleMessage(android.os.Message) for 140ms
+11-06 03:49:40.146  1856  1872 W Looper  : Slow dispatch took 144ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=null m=30
+11-06 03:49:40.210  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:40.252  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:40.390  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@aaff6bb)
+11-06 03:49:40.391  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@aaff6bb)
+11-06 03:49:40.487  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:40.571  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:40.586  1707  1927 W SurfaceFlinger: Attempting to set client state on removed layer: Dim Layer for - Task=16#0
+11-06 03:49:40.586  1707  1927 W SurfaceFlinger: Attempting to destroy on removed layer: Dim Layer for - Task=16#0
+11-06 03:49:40.635  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:40.650  2918  4794 D EGL_emulation: eglMakeCurrent: 0x71be9e539780: ver 3 0 (tinfo 0x71be9fff4c60)
+11-06 03:49:40.748  1987  2247 D EGL_emulation: eglMakeCurrent: 0x71be90636400: ver 3 0 (tinfo 0x71be9e45b2e0)
+11-06 03:49:41.084  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 790528
+11-06 03:49:41.390  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7edee16)
+11-06 03:49:41.391  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7edee16)
+11-06 03:49:41.481  1707  1707 W SurfaceFlinger: couldn't log to binary event log: overflow.
+11-06 03:49:41.839  5935  5935 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:41.870  5935  5935 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:41.871  5935  5935 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:41.885  5935  5935 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-06 03:49:41.887  1856  5426 D ActivityManager: Raise procstate to external provider: ProcessRecord{f40604 2479:android.process.media/u0a10}
+11-06 03:49:41.894  5935  5935 D AndroidRuntime: Shutting down VM
+11-06 03:49:41.943  1707  2144 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-06 03:49:41.943  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-06 03:49:41.967  5947  5947 D         : HostConnection::get() New Host Connection established 0x77983862ee40, tid 5947
+11-06 03:49:42.390  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b97f984)
+11-06 03:49:42.390  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b97f984)
+11-06 03:49:42.971  1553  1625 W audio_hw_generic: Not supplying enough data to HAL, expected position 9010815 , only wrote 8858160
+11-06 03:49:43.391  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@dd3a56d)
+11-06 03:49:43.391  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@dd3a56d)
+11-06 03:49:44.263  1707  2144 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-06 03:49:44.263  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-06 03:49:44.284  5951  5951 D         : HostConnection::get() New Host Connection established 0x7d5f5062ee40, tid 5951
+11-06 03:49:44.390  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ed2d5a2)
+11-06 03:49:44.391  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ed2d5a2)
+11-06 03:49:44.596  5953  5953 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-06 03:49:44.627  5953  5953 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-06 03:49:44.629  5953  5953 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:44.629  5953  5953 I app_process: The ClassLoaderContext is a special shared library.
+11-06 03:49:44.643  5953  5953 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-06 03:49:41.887  1856  5426 D ActivityManager: Raise procstate to external provider: ProcessRecord{f40604 2479:android.process.media/u0a10}
+11-06 03:49:44.651  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:45.391  1856  1965 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7122b69)
+11-06 03:49:45.391  1856  1870 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7122b69)
+11-06 03:49:45.673  5953  5953 W AccessibilityNodeInfoDumper: Fetch time: 3ms
+11-06 03:49:45.674  1856  5426 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@a288233
+11-06 03:49:45.675  1856  1856 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-06 03:49:45.679  5953  5953 D AndroidRuntime: Shutting down VM

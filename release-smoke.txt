@@ -1,0 +1,7 @@
+Starting: Intent { cmp=com.twtrubiks.snapmark/.MainActivity }
+Status: ok
+Activity: com.twtrubiks.snapmark/.MainActivity
+ThisTime: 3317
+TotalTime: 3317
+WaitTime: 3547
+Complete

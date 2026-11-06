@@ -1,0 +1,8 @@
+
+com.twtrubiks.snapmark.DeviceTest:...........
+
+Time: 0.629
+
+OK (11 tests)
+
+
