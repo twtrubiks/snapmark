@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 馬賽克：深淺交錯的格子（自己畫的） -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M3,3h6v6H3zM15,3h6v6h-6zM9,9h6v6H9zM3,15h6v6H3zM15,15h6v6h-6z" />
+    <path
+        android:fillAlpha="0.45"
+        android:fillColor="@android:color/white"
+        android:pathData="M9,3h6v6H9zM3,9h6v6H3zM15,9h6v6h-6zM9,15h6v6H9z" />
+</vector>

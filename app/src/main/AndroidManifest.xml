@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- 骨架階段沒有任何權限。App 不連網，之後也不加 INTERNET。
-         做到相機、照片、存到相簿、分享時要加的東西（FileProvider、權限、intent-filter）寫在 CLAUDE.md 的規格裡 -->
+    <!-- App 不連網，之後也不加 INTERNET。
+         相機用系統的相機 App、照片用系統的挑選器，都不需要權限；**不要宣告 CAMERA**：宣告了又沒授權的話，反而叫不出系統相機。
+         分享用 FileProvider，也不需要權限 -->
+
+    <!-- 只有 Android 9 要：存到相簿（Pictures/SnapMark/）。Android 10 以上寫 MediaStore 不需要權限。按「存到相簿」時才問 -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
 
     <!-- allowBackup 關著：作品是使用者自己的照片，檔案大（系統備份上限 25 MB）也比較私人，不交給系統備份 -->
     <application
@@ -13,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.SnapMark">
-        <!-- singleTask：之後接別的 App「分享」圖片進來時，交給同一個 MainActivity 的 onNewIntent，不會開出第二份 -->
+        <!-- singleTask：App 開著時別的 App「分享」圖片進來，交給同一個 MainActivity 的 onNewIntent，不會開出第二份 -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -23,7 +29,25 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <!-- 別的 App 的「分享」→ SnapMark：一張圖片開成一張新的作品（MainActivity.receive）。
+                 ACTION_VIEW、ACTION_EDIT 先不做 -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
         </activity>
+
+        <!-- 把 cacheDir 裡的檔案交給別的 App：系統相機寫照片進來、分享成品圖（res/xml/file_paths.xml）。authorities 跟 fileProviderAuthority 一樣 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.files"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

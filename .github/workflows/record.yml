@@ -84,9 +84,19 @@ jobs:
           script: bash scripts/ci/record.sh out
 
       - name: Compress video & extract frames
-        if: always() && hashFiles('out/demo.raw.mp4') != ''
+        if: always() && hashFiles('out/demo-*.mp4') != ''
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          # record.sh 每 180 秒錄一段（screenrecord 的上限）：照順序接起來，壞掉、太短的段（剛好在停的時候開始的）跳過
+          : > out/segments.txt
+          for f in $(ls out/demo-*.mp4 | sort -V); do
+            d=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$f" || echo 0)
+            if awk -v d="$d" 'BEGIN { exit !(d >= 0.5) }'; then
+              echo "file '$(basename "$f")'" >> out/segments.txt
+            fi
+          done
+          cat out/segments.txt
+          ffmpeg -loglevel error -f concat -safe 0 -i out/segments.txt -c copy out/demo.raw.mp4
           mkdir -p media/frames
           ffmpeg -loglevel error -i out/demo.raw.mp4 -an -c:v libx264 -crf 28 -preset veryfast \
             -vf "scale=540:-2" -movflags +faststart media/demo.mp4

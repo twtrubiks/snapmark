@@ -7,6 +7,11 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
+// 畫面預覽（Robolectric，見 CLAUDE.md 的「畫面預覽」）是選用的：./gradlew testDebugUnitTest -Ppreview --tests '*PreviewTest'
+// Robolectric 畫圖用的 jar 有 150 MB，雲端 VM 的共用 IP 下載常被 Maven Central 限流很久，
+// 不放進每次都要跑的 build：沒有 -Ppreview 時，build、JVM 測試、CI 都碰不到 Robolectric
+val preview = providers.gradleProperty("preview").isPresent
+
 android {
     namespace = "com.twtrubiks.snapmark"
     compileSdk = 37
@@ -55,6 +60,15 @@ android {
     buildFeatures {
         compose = true
     }
+
+    // 模擬器上的測試與畫面預覽共用的測試資料（例如示範馬賽克用的「照片」）
+    sourceSets.getByName("androidTest").kotlin.directories.add("src/sharedTest/java")
+    if (preview) {
+        // 預覽的測試放在 src/preview/java，要讀得到 App 的資源
+        sourceSets.getByName("test").kotlin.directories.add("src/preview/java")
+        sourceSets.getByName("test").kotlin.directories.add("src/sharedTest/java")
+        testOptions.unitTests.isIncludeAndroidResources = true
+    }
 }
 
 kotlin {
@@ -63,31 +77,41 @@ kotlin {
     }
 }
 
+// 畫面預覽的 PNG 放這裡（給 Claude 用 Read 看）
+val previewDir = layout.buildDirectory.dir("previews").get().asFile.path
+
 tasks.withType<Test>().configureEach {
     // CI 只留得下 gradle-build.txt，測試失敗要直接印出期望值與實際值
     testLogging { exceptionFormat = TestExceptionFormat.FULL }
+    systemProperty("snapmark.previews", previewDir)
+    // captureToImage 走硬體繪圖，畫出來跟手機上一樣
+    systemProperty("robolectric.pixelCopyRenderMode", "hardware")
 }
 
 dependencies {
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
-    implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.material3)
-    debugImplementation(libs.androidx.compose.ui.tooling)
-    implementation(libs.androidx.exifinterface)
     implementation(libs.coil.compose)
     implementation(libs.kotlinx.serialization.json)
 
     testImplementation(libs.junit)
     testImplementation(libs.sqlite.jdbc)
+    if (preview) {
+        testImplementation(libs.robolectric)
+        testImplementation(platform(libs.androidx.compose.bom))
+        testImplementation(libs.androidx.compose.ui.test.junit4)
+        // createAndroidComposeRule 需要的空白 Activity
+        debugImplementation(libs.androidx.compose.ui.test.manifest)
+    }
 
     androidTestImplementation(libs.androidx.test.runner)
     androidTestImplementation(libs.androidx.test.core)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.uiautomator)
+    androidTestImplementation(libs.androidx.exifinterface)
 }

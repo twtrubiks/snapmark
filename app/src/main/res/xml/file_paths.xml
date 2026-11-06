@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FileProvider 開放給別的 App 的資料夾（都在 cacheDir 裡）：
+     camera：系統相機 App 把拍的照片寫到這裡（PhotoSources）
+     share：要分享的成品圖（Export.kt 的 writeShareFile），交給系統的分享選單 -->
+<paths>
+    <cache-path name="camera" path="camera/" />
+    <cache-path name="share" path="share/" />
+</paths>

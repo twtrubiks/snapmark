@@ -38,7 +38,7 @@
 
 選剛才建立的環境和這個 repo，然後寫 prompt，例如：
 
-> 依照 CLAUDE.md 的「第一次 session」先把骨架 build 過，再照「建議的實作順序」做第一步：先寫 JVM 測試，在 VM 內 build 通過後改 DemoRecordingTest。
+> 依照 CLAUDE.md 先在 VM 內 build 一次，再照「目前的狀態」的下一步做：先寫 JVM 測試，在 VM 內 build 通過後改 DemoRecordingTest。
 > push 之後等 GitHub Actions 錄影跑完，看 frames 確認畫面正常，最後告訴我影片在哪裡。
 
 ## 常見問題

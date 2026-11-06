@@ -2,14 +2,16 @@ name: Android release
 
 # 發一版給別人下載的 APK：build、用發版金鑰簽名、放到 GitHub Release（tag 是 v<版本>）。
 # README 的下載連結指向 releases/latest/download/snapmark.apk，永遠是最新的那一版。
+# 版本號是語意化版本 MAJOR.MINOR.PATCH（第一版 1.0.0）：修 bug 加 PATCH（1.0.1）、加功能加 MINOR（1.1.0）、
+# 大改才加 MAJOR。手機判斷新舊看的是 versionCode（下面算的分鐘數），版本號只是給人看的。
 # 三種發法，版本已經發過的話就跳過（merge 進 main 時也不會重發）：
-#   - 改 release-version（例如 2026.11.01，同一天第二版寫 2026.11.01.2）推上去——
-#     Claude 雲端 session 只能推自己的 branch、推不了 tag，用這個
-#   - 推一個 tag：git tag v2026.11.01 && git push origin v2026.11.01（版本就是 tag 後面那段）
-#   - 手動觸發：Actions → Android release → Run workflow，版本照 release-version
+#   - 推一個 tag：git tag -a v1.0.1 -m "SnapMark 1.0.1" && git push origin v1.0.1（版本就是 tag 後面那段）
+#   - 改 release-version（寫 1.0.1 這樣，不加 v）推上去——
+#     Claude 雲端 session 只能推自己的 branch、推不了 tag，用這個。1.0.0 是推 tag 發的，第一次用時新增這個檔案
+#   - 手動觸發：Actions → Android release → Run workflow，版本照 release-version（要先有這個檔案）
 #
 # 每一版都要用同一把金鑰簽，手機上的舊版才能直接更新；換了金鑰只能移除重裝，作品會一起刪掉。
-# 第一次發版前照 docs/release-key.md 產生金鑰、設好 Secrets、把憑證的 SHA-256 填進下面的 EXPECTED_CERT：
+# 金鑰、Secrets、下面的 EXPECTED_CERT 都設好了（2026-11-06）；金鑰不見了、只能換一把時才照 docs/release-key.md 重做：
 #   ANDROID_SIGNING_KEYSTORE  PKCS12 金鑰檔的 base64（alias 是 snapmark）
 #   ANDROID_SIGNING_PASSWORD  金鑰檔與金鑰的密碼
 # 簽完會核對憑證的 SHA-256 跟 EXPECTED_CERT 一樣，Secret 被換成別把金鑰的話就不發版。
@@ -29,8 +31,8 @@ permissions:
   contents: write
 
 env:
-  # 還沒有發版金鑰：照 docs/release-key.md 產生後填進來（64 碼小寫十六進位）
-  EXPECTED_CERT: ''
+  # 發版金鑰的憑證 SHA-256（2026-11-06 產生，CN=SnapMark，RSA 4096）。不要改：改了就是換金鑰，手機上的舊版不能直接更新
+  EXPECTED_CERT: '96941b2eeef9679e0a6eefae72c427dec774611715a353068c9d0a61b885027f'
 
 jobs:
   version:
