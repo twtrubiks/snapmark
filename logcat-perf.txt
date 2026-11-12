@@ -1,0 +1,800 @@
+--------- beginning of main
+11-12 04:52:44.375  5054  5070 D UiDevice: Taking screenshot (scale=0.500000, quality=90) and storing at /storage/emulated/0/Android/data/com.twtrubiks.snapmark/files/screenshots/systemui-0-picker.png.
+11-12 04:52:44.376  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:52:44.485  5054  5070 D UiDevice: Retrieving node with selector: BySelector [TEXT='^\Qsnapmark-test\E.*$'].
+11-12 04:52:44.486  5054  5070 W QueryController: Could not detect idle state.
+11-12 04:52:44.491  5054  5070 W QueryController: Could not detect idle state.
+11-12 04:52:44.492  5054  5070 D UiObject2: Clicking on (444, 1255).
+11-12 04:52:44.492  5054  5070 W UiObject2: Clicking on non-clickable object: android.view.accessibility.AccessibilityNodeInfo@2dc12; boundsInParent: Rect(0, 0 - 426, 76); boundsInScreen: Rect(231, 1217 - 657, 1293); packageName: com.android.documentsui; className: android.widget.TextView; text: snapmark-test.jpg; error: null; maxTextLength: -1; contentDescription: null; tooltipText: null; viewIdResName: android:id/title; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: true; visible: true; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_NEXT_AT_MOVEMENT_GRANULARITY - null, AccessibilityAction: ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY - null, AccessibilityAction: ACTION_SET_SELECTION - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]
+11-12 04:52:44.503  4990  4990 D PickerActionHandler: onFinished() [content://com.android.providers.media.documents/document/image%3A17]
+11-12 04:52:44.511  5054  5070 D UiDevice: Retrieving node with selector: BySelector [RES='\Qcanvas\E'].
+11-12 04:52:44.511  5054  5070 W QueryController: Could not detect idle state.
+11-12 04:52:44.514  5054  5054 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@6ac78df in: RESTARTED
+11-12 04:52:44.515  5054  5054 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@6ac78df in: STARTED
+11-12 04:52:44.515  5054  5054 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@6ac78df in: RESUMED
+11-12 04:52:44.519  1714  1724 D hwcomposer: hw_composer sent 48 syncs in 63s
+11-12 04:52:44.542  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:52:44.543  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:52:44.545  1565  1623 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:52:44.547  5054  5070 D UiDevice: Node not found with selector: BySelector [RES='\Qcanvas\E'].
+11-12 04:52:44.580  5054  5076 D EGL_emulation: eglMakeCurrent: 0x79eb610bb820: ver 3 0 (tinfo 0x79eb610c4cc0)
+11-12 04:52:44.647  5054  5070 D UiDevice: Retrieving node with selector: BySelector [RES='\Qcanvas\E'].
+11-12 04:52:44.651  5054  5070 W QueryController: Could not detect idle state.
+11-12 04:52:44.751  5054  5070 D UiDevice: Node not found with selector: BySelector [RES='\Qcanvas\E'].
+11-12 04:52:44.760  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4af10e8)
+11-12 04:52:44.760  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4af10e8)
+11-12 04:52:44.854  5054  5070 D UiDevice: Retrieving node with selector: BySelector [RES='\Qcanvas\E'].
+11-12 04:52:44.855  5054  5070 W QueryController: Could not detect idle state.
+11-12 04:52:45.053  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:45.129  1977  2209 I chatty  : uid=10016(com.android.systemui) RenderThread identical 3 lines
+11-12 04:52:45.168  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:45.191  4990  5473 D EGL_emulation: eglMakeCurrent: 0x79eb7303ebc0: ver 3 0 (tinfo 0x79eb730e50a0)
+11-12 04:52:45.218  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:45.660  1553  1607 W audio_hw_generic: Not supplying enough data to HAL, expected position 7566956 , only wrote 7385760
+11-12 04:52:45.760  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@87d7be7)
+11-12 04:52:45.761  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@87d7be7)
+11-12 04:52:45.967  5054  5070 D UiDevice: Taking screenshot (scale=0.500000, quality=90) and storing at /storage/emulated/0/Android/data/com.twtrubiks.snapmark/files/screenshots/systemui-1-picked.png.
+11-12 04:52:45.968  1565  1623 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:52:46.125  5614  5614 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-12 04:52:46.146  5614  5614 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-12 04:52:46.146  5614  5614 I app_process: The ClassLoaderContext is a special shared library.
+11-12 04:52:46.155  5614  5614 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+--------- beginning of system
+11-12 04:52:46.156  1835  1848 D ActivityManager: Raise procstate to external provider: ProcessRecord{6e4dc49 2438:android.process.media/u0a9}
+11-12 04:52:46.159  5614  5614 D AndroidRuntime: Shutting down VM
+11-12 04:52:46.169  5054  5070 I TestRunner: finished: pickedPhotoOpensTheCanvasUpright(com.twtrubiks.snapmark.SystemUiTest)
+11-12 04:52:46.169  5054  5070 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:52:46.169  5054  5054 I MonitoringInstr: Finishing activity: com.twtrubiks.snapmark.MainActivity@6ac78df
+11-12 04:52:46.171  5054  5054 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@6ac78df in: PAUSED
+11-12 04:52:46.210  1565  1623 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:52:46.211  1565  1623 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:52:46.212  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:52:46.219  5054  5070 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:52:46.239  2452  2665 D EGL_emulation: eglMakeCurrent: 0x79eb63aa8620: ver 3 0 (tinfo 0x79eb6fdb3740)
+11-12 04:52:46.270  5054  5070 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:52:46.303  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:46.323  5054  5070 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:52:46.330  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:52:46.346  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:46.375  5054  5070 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:52:46.528  5054  5070 I chatty  : uid=10067(com.twtrubiks.snapmark) identical 3 lines
+11-12 04:52:46.579  5054  5070 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:52:46.589  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:46.597  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:46.609  2326  2326 I Dialer  : VvmTaskExecutor - Stopping service
+11-12 04:52:46.609  2326  2326 I Dialer  : VvmTaskExecutor - finishing Job
+11-12 04:52:46.609  2326  2326 I Dialer  : TaskSchedulerJobService - finishing job
+11-12 04:52:46.612  2326  2326 I Dialer  : JobFinishedPoller.run - Job finished
+11-12 04:52:46.612  2326  2326 I Dialer  : VvmTaskExecutor - terminated
+11-12 04:52:46.629  5054  5070 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:52:46.648  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:46.679  5054  5070 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:52:46.721  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:46.736  5054  5070 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:52:46.765  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e9acaa9)
+11-12 04:52:46.765  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e9acaa9)
+11-12 04:52:46.776  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:46.787  5054  5070 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:52:46.816  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:46.837  5054  5070 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:52:46.870  5054  5076 D EGL_emulation: eglMakeCurrent: 0x79eb610bb820: ver 3 0 (tinfo 0x79eb610c4cc0)
+11-12 04:52:46.886  5054  5054 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@6ac78df in: STOPPED
+11-12 04:52:46.887  5054  5070 I TestRunner: run finished: 8 tests, 0 failed, 0 ignored
+11-12 04:52:46.895  1835  5042 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@f115e2b
+11-12 04:52:46.896  1835  1835 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-12 04:52:46.900  1835  1848 I ActivityManager: Force stopping com.twtrubiks.snapmark appid=10067 user=0: finished inst
+11-12 04:52:46.900  1835  1848 I ActivityManager: Killing 5054:com.twtrubiks.snapmark/u0a67 (adj 0): stop com.twtrubiks.snapmark
+11-12 04:52:46.901  1835  1855 W libprocessgroup: kill(-5054, 9) failed: No such process
+11-12 04:52:46.905  1835  5628 W Binder  : Outgoing transactions from this process must be FLAG_ONEWAY
+11-12 04:52:46.905  1835  5628 W Binder  : java.lang.Throwable
+11-12 04:52:46.905  1835  5628 W Binder  : 	at android.os.BinderProxy.transact(Binder.java:1114)
+11-12 04:52:46.905  1835  5628 W Binder  : 	at android.app.IInstrumentationWatcher$Stub$Proxy.instrumentationFinished(IInstrumentationWatcher.java:164)
+11-12 04:52:46.905  1835  5628 W Binder  : 	at com.android.server.am.InstrumentationReporter$MyThread.run(InstrumentationReporter.java:86)
+11-12 04:52:46.905  5007  5007 D AndroidRuntime: Shutting down VM
+11-12 04:52:46.944  1835  1855 W libprocessgroup: kill(-5054, 9) failed: No such process
+11-12 04:52:46.944  1835  1855 I libprocessgroup: Successfully killed process cgroup uid 10067 pid 5054 in 43ms
+11-12 04:52:46.950  1685  1685 I Zygote  : Process 5054 exited due to signal (9)
+11-12 04:52:46.950  1835  1860 W ActivityManager: setHasOverlayUi called on unknown pid: 5054
+11-12 04:52:47.000  1835  4941 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+11-12 04:52:47.000  1835  4941 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+11-12 04:52:47.000  1835  4941 I OpenGLRenderer: Initialized EGL, version 1.4
+11-12 04:52:47.000  1835  4941 D OpenGLRenderer: Swap behavior 1
+11-12 04:52:47.047  1835  4941 D EGL_emulation: eglCreateContext: 0x79eb5e30eba0: maj 3 min 0 rcv 3
+11-12 04:52:47.053  1835  4941 D EGL_emulation: eglMakeCurrent: 0x79eb5e30eba0: ver 3 0 (tinfo 0x79eb5b2d95a0)
+11-12 04:52:47.135  1835  1848 I ActivityManager: Force stopping com.twtrubiks.snapmark appid=10067 user=0: from pid 5631
+11-12 04:52:47.138  2055  2055 D CarrierSvcBindHelper: No carrier app for: 0
+11-12 04:52:47.350  5639  5639 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-12 04:52:47.386  5639  5639 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-12 04:52:47.387  5639  5639 I app_process: The ClassLoaderContext is a special shared library.
+11-12 04:52:47.410  5639  5639 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-12 04:52:47.423  1835  1848 I ActivityManager: Force stopping com.twtrubiks.snapmark appid=10067 user=0: start instr
+11-12 04:52:47.436  1835  1854 I ActivityManager: Start proc 5649:com.twtrubiks.snapmark/u0a67 for added application com.twtrubiks.snapmark
+11-12 04:52:47.436  5649  5649 I rubiks.snapmar: Late-enabling -Xcheck:jni
+11-12 04:52:47.444  5649  5649 W rubiks.snapmar: Unexpected CPU variant for X86 using defaults: x86_64
+11-12 04:52:47.492  5649  5649 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[com.twtrubiks.snapmark]: x86_64, null instrumentation[com.twtrubiks.snapmark.test]: null, null
+11-12 04:52:47.495  5649  5649 W rubiks.snapmar: ClassLoaderContext classpath size mismatch for position 0. expected=0, found=4 (PCL[] | PCL[/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk*318807043:/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes2.dex*1170772508:/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes3.dex*4052388668:/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes4.dex*1144132602])
+11-12 04:52:47.495  5649  5649 W rubiks.snapmar: Found duplicate classes, falling back to extracting from APK : /data/app/com.twtrubiks.snapmark-oV85EU3maSMkiTHvOsDZIg==/base.apk
+11-12 04:52:47.495  5649  5649 W rubiks.snapmar: NOTE: This wastes RAM and hurts startup performance.
+11-12 04:52:47.495  5649  5649 W rubiks.snapmar: Found duplicated class when checking oat files: 'Landroid/accessibilityservice/AccessibilityService$TakeScreenshotCallback;' in /data/app/com.twtrubiks.snapmark-oV85EU3maSMkiTHvOsDZIg==/base.apk!classes4.dex and /data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes4.dex
+11-12 04:52:47.495  5649  5649 W rubiks.snapmar: 
+11-12 04:52:47.765  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8d5693a)
+11-12 04:52:47.765  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8d5693a)
+11-12 04:52:48.066  5649  5649 W rubiks.snapmar: ClassLoaderContext size mismatch. expected=1, actual=2 (PCL[] | PCL[];PCL[/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk*318807043:/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes2.dex*1170772508:/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes3.dex*4052388668:/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes4.dex*1144132602:/data/app/com.twtrubiks.snapmark-oV85EU3maSMkiTHvOsDZIg==/base.apk*1037254270:/data/app/com.twtrubiks.snapmark-oV85EU3maSMkiTHvOsDZIg==/base.apk!classes2.dex*573805608:/data/app/com.twtrubiks.snapmark-oV85EU3maSMkiTHvOsDZIg==/base.apk!classes3.dex*2056427468:/data/app/com.twtrubiks.snapmark-oV85EU3maSMkiTHvOsDZIg==/base.apk!classes4.dex*1144132602:/data/app/com.twtrubiks.snapmark-oV85EU3maSMkiTHvOsDZIg==/base.apk!classes5.dex*631393081])
+11-12 04:52:48.066  5649  5649 W rubiks.snapmar: Found duplicate classes, falling back to extracting from APK : /data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk
+11-12 04:52:48.066  5649  5649 W rubiks.snapmar: NOTE: This wastes RAM and hurts startup performance.
+11-12 04:52:48.066  5649  5649 W rubiks.snapmar: Found duplicated class when checking oat files: 'Landroid/accessibilityservice/AccessibilityService$TakeScreenshotCallback;' in /data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes4.dex and /data/app/com.twtrubiks.snapmark-oV85EU3maSMkiTHvOsDZIg==/base.apk!classes4.dex
+11-12 04:52:48.066  5649  5649 W rubiks.snapmar: 
+11-12 04:52:48.092  5649  5649 W rubiks.snapmar: ClassLoaderContext size mismatch. expected=1, actual=2 (PCL[] | PCL[/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk*318807043:/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes2.dex*1170772508:/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes3.dex*4052388668:/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes4.dex*1144132602];PCL[/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk*318807043:/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes2.dex*1170772508:/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes3.dex*4052388668:/data/app/com.twtrubiks.snapmark.test-7aHXkWqjrLr_6JgyPAHy4Q==/base.apk!classes4.dex*1144132602:/data/app/com.twtrubiks.snapmark-oV85EU3maSMkiTHvOsDZIg==/base.apk*1037254270:/data/app/com.twtrubiks.snapmark-oV85EU3maSMkiTHvOsDZIg==/base.apk!classes2.dex*573805608:/data/app/com.twtrubiks.snapmark-oV85EU3ma
+11-12 04:52:48.092  5649  5649 W rubiks.snapmar: Found duplicate classes, falling back to extracting from APK : /data/app/com.twtrubiks.snapmark-oV85EU3maSMkiTHvOsDZIg==/base.apk
+11-12 04:52:48.092  5649  5649 W rubiks.snapmar: NOTE: This wastes RAM and hurts startup performance.
+11-12 04:52:48.092  5649  5649 W rubiks.snapmar: Found duplicated class when checking oat files: 'L_COROUTINE/ArtificialStackFrames;' in /data/app/com.twtrubiks.snapmark-oV85EU3maSMkiTHvOsDZIg==/base.apk and /data/app/com.twtrubiks.snapmark-oV85EU3maSMkiTHvOsDZIg==/base.apk
+11-12 04:52:48.092  5649  5649 W rubiks.snapmar: 
+11-12 04:52:48.494  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/app/Instrumentation;->execStartActivity(Landroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/Instrumentation$ActivityResult; (light greylist, linking)
+11-12 04:52:48.494  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/app/Instrumentation;->execStartActivity(Landroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/Instrumentation$ActivityResult; (light greylist, linking)
+11-12 04:52:48.496  5649  5649 I AndroidJUnitRunner: newApplication com.twtrubiks.snapmark.SnapMarkApplication
+11-12 04:52:48.499  5649  5649 W rubiks.snapmar: Accessing hidden field Landroid/os/Trace;->TRACE_TAG_APP:J (light greylist, reflection)
+11-12 04:52:48.499  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/os/Trace;->isTagEnabled(J)Z (light greylist, reflection)
+11-12 04:52:48.506  5649  5649 I AndroidJUnitRunner: onCreate Bundle[mParcelledData.dataSize=92]
+11-12 04:52:48.506  5649  5649 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+11-12 04:52:48.509  5649  5649 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+11-12 04:52:48.509  5649  5665 D AndroidJUnitRunner: onStart is called.
+11-12 04:52:48.517  5649  5665 I TestRunner: run started: 1 tests
+11-12 04:52:48.518  5649  5665 I TestRunner: started: drawingOnABusyCanvas(com.twtrubiks.snapmark.PerfTest)
+11-12 04:52:48.523  5649  5665 I UiDevice: Creating a new instance, old instance exists: false
+11-12 04:52:48.525  1835  1835 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-12 04:52:48.531  5649  5665 D UiDevice: Setting accessibility service flags: 65618
+11-12 04:52:48.681  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qandroid:id/aerr_close\E'].
+11-12 04:52:48.681  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:48.700  5649  5665 D UiDevice: Node not found with selector: BySelector [RES='\Qandroid:id/aerr_close\E'].
+11-12 04:52:48.700  1835  2281 I ActivityManager: START u0 {flg=0x10008000 cmp=com.twtrubiks.snapmark/.MainActivity} from uid 10067
+11-12 04:52:48.706  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:52:48.706  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:48.748  5649  5649 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@18ce013
+11-12 04:52:48.766  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@24c298d)
+11-12 04:52:48.766  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@24c298d)
+11-12 04:52:48.824  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@4312b68 in: PRE_ON_CREATE
+11-12 04:52:48.829  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:52:48.884  5649  5665 D UiDevice: Node not found with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:52:48.892  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@4312b68 in: CREATED
+11-12 04:52:48.898  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@4312b68 in: STARTED
+11-12 04:52:48.899  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@4312b68 in: RESUMED
+11-12 04:52:48.899  5649  5649 D OpenGLRenderer: Skia GL Pipeline
+11-12 04:52:48.901  1684  1686 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-12 04:52:48.984  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:52:48.985  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:49.028  5649  5665 D UiDevice: Node not found with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:52:49.129  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:52:49.129  5649  5649 W rubiks.snapmar: Accessing hidden field Landroid/view/WindowInsets;->CONSUMED:Landroid/view/WindowInsets; (light greylist, reflection)
+11-12 04:52:49.130  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl; (light greylist, reflection)
+11-12 04:52:49.130  5649  5649 W rubiks.snapmar: Accessing hidden field Landroid/view/View$AttachInfo;->mVisibleInsets:Landroid/graphics/Rect; (light greylist, reflection)
+11-12 04:52:49.130  5649  5649 W rubiks.snapmar: Accessing hidden field Landroid/view/ViewRootImpl;->mAttachInfo:Landroid/view/View$AttachInfo; (light greylist, reflection)
+11-12 04:52:49.130  5649  5649 W rubiks.snapmar: Accessing hidden field Landroid/graphics/Insets;->left:I (light greylist, linking)
+11-12 04:52:49.130  5649  5649 W rubiks.snapmar: Accessing hidden field Landroid/graphics/Insets;->top:I (light greylist, linking)
+11-12 04:52:49.130  5649  5649 W rubiks.snapmar: Accessing hidden field Landroid/graphics/Insets;->right:I (light greylist, linking)
+11-12 04:52:49.130  5649  5649 W rubiks.snapmar: Accessing hidden field Landroid/graphics/Insets;->bottom:I (light greylist, linking)
+11-12 04:52:49.132  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:49.154  5649  5665 D UiDevice: Node not found with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:52:49.255  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:52:49.256  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:49.270  5649  5665 D UiDevice: Node not found with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:52:49.351  2452  2665 D EGL_emulation: eglMakeCurrent: 0x79eb63aa8620: ver 3 0 (tinfo 0x79eb6fdb3740)
+11-12 04:52:49.351  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:49.371  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:52:49.371  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:49.372  5649  5665 W UiDevice: Active window root not found.
+11-12 04:52:49.388  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:49.427  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/text/SpannableStringInternal;->length()I (light greylist, linking)
+11-12 04:52:49.433  5649  5665 W UiDevice: Skipping null root node for window: AccessibilityWindowInfo[title=Quickstep, id=49, type=TYPE_APPLICATION, layer=0, bounds=Rect(0, 0 - 1440, 3120), focused=true, active=true, pictureInPicture=false, hasParent=false, isAnchored=false, hasChildren=false]
+11-12 04:52:49.439  5649  5665 D UiDevice: Node not found with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:52:49.540  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:52:49.541  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:49.563  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:52:49.564  5649  5671 D         : HostConnection::get() New Host Connection established 0x79eb79748760, tid 5671
+11-12 04:52:49.567  5649  5665 W UiDevice: Active window root not found.
+11-12 04:52:49.580  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:52:49.595  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:52:49.621  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->create(Ljava/lang/String;Landroid/view/View;)Landroid/view/RenderNode; (light greylist, linking)
+11-12 04:52:49.621  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->getScaleX()F (dark greylist, linking)
+11-12 04:52:49.621  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setClipToBounds(Z)Z (light greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setClipToOutline(Z)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5671 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setClipToOutline(Z)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5671 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setClipToOutline(Z)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setLayerType(I)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5671 I OpenGLRenderer: Initialized EGL, version 1.4
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setLayerType(I)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setLayerType(I)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5671 D OpenGLRenderer: Swap behavior 1
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setPivotX(F)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setPivotX(F)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setLeftTopRightBottom(IIII)Z (light greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->getMatrix(Landroid/graphics/Matrix;)V (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/DisplayListCanvas;->drawRenderNode(Landroid/view/RenderNode;)V (light greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->isValid()Z (light greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->start(II)Landroid/view/DisplayListCanvas; (light greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->end(Landroid/view/DisplayListCanvas;)V (light greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setAlpha(F)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setCameraDistance(F)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setLayerPaint(Landroid/graphics/Paint;)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setOutline(Landroid/graphics/Outline;)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setPivotX(F)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setRotationX(F)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setRotationY(F)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setRotation(F)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setScaleX(F)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setScaleY(F)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setElevation(F)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setTranslationX(F)Z (dark greylist, linking)
+11-12 04:52:49.622  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->setTranslationY(F)Z (dark greylist, linking)
+11-12 04:52:49.623  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/RenderNode;->getScaleX()F (dark greylist, linking)
+11-12 04:52:49.623  5649  5671 D EGL_emulation: eglCreateContext: 0x79eb6fdeabe0: maj 3 min 0 rcv 3
+11-12 04:52:49.623  5649  5671 D EGL_emulation: eglMakeCurrent: 0x79eb6fdeabe0: ver 3 0 (tinfo 0x79eb6fcc1f40)
+11-12 04:52:49.625  1684  2316 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-12 04:52:49.648  5649  5665 W UiDevice: Skipping null root node for window: AccessibilityWindowInfo[title=Quickstep, id=49, type=TYPE_APPLICATION, layer=0, bounds=Rect(0, 0 - 1440, 3120), focused=true, active=true, pictureInPicture=false, hasParent=false, isAnchored=false, hasChildren=false]
+11-12 04:52:49.669  5649  5649 I Choreographer: Skipped 40 frames!  The application may be doing too much work on its main thread.
+11-12 04:52:49.769  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@283c1c0)
+11-12 04:52:49.769  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@283c1c0)
+11-12 04:52:49.786  5649  5665 D UiDevice: Node not found with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:52:49.805  5649  5671 D EGL_emulation: eglMakeCurrent: 0x79eb6fdeabe0: ver 3 0 (tinfo 0x79eb6fcc1f40)
+11-12 04:52:49.884  1835  1953 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+11-12 04:52:49.887  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:52:49.888  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:50.764  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1a22ef9)
+11-12 04:52:50.764  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1a22ef9)
+11-12 04:52:51.478  5649  5671 I OpenGLRenderer: Davey! duration=2464ms; Flags=1, IntendedVsync=344857778887, Vsync=345524445527, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=345540765346, AnimationStart=345540784629, PerformTraversalsStart=345540785839, DrawStart=345640701757, SyncQueued=345675155345, SyncStart=345702585212, IssueDrawCommandsStart=345702646053, SwapBuffers=347275272481, FrameCompleted=347349652344, DequeueBufferDuration=957000, QueueBufferDuration=882000, 
+11-12 04:52:51.480  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/os/Trace;->asyncTraceBegin(JLjava/lang/String;I)V (light greylist, reflection)
+11-12 04:52:51.480  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/os/Trace;->asyncTraceEnd(JLjava/lang/String;I)V (light greylist, reflection)
+11-12 04:52:51.480  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/os/Trace;->traceCounter(JLjava/lang/String;I)V (light greylist, reflection)
+11-12 04:52:51.486  1835  1860 I ActivityManager: Displayed com.twtrubiks.snapmark/.MainActivity: +2s733ms
+11-12 04:52:51.492  5649  5649 I Choreographer: Skipped 102 frames!  The application may be doing too much work on its main thread.
+11-12 04:52:51.539  5649  5671 I OpenGLRenderer: Davey! duration=1755ms; Flags=0, IntendedVsync=345654919166, Vsync=347354919098, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=347363303478, AnimationStart=347363326502, PerformTraversalsStart=347372923250, DrawStart=347373486263, SyncQueued=347373499005, SyncStart=347373510614, IssueDrawCommandsStart=347373537966, SwapBuffers=347374081085, FrameCompleted=347410617717, DequeueBufferDuration=1019000, QueueBufferDuration=2039000, 
+11-12 04:52:51.626  5649  5665 I GestureController: can't find MotionEvent#setDisplayId(int)
+11-12 04:52:51.626  5649  5665 I GestureController: java.lang.NoSuchMethodException: setDisplayId [int]
+11-12 04:52:51.626  5649  5665 I GestureController: 	at java.lang.Class.getMethod(Class.java:2068)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at java.lang.Class.getMethod(Class.java:1690)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at androidx.test.uiautomator.GestureController.<clinit>(GestureController.java:64)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at androidx.test.uiautomator.GestureController.getInstance(GestureController.java:116)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at androidx.test.uiautomator.UiObject2.<init>(UiObject2.java:101)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at androidx.test.uiautomator.UiObject2.create(UiObject2.java:122)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at androidx.test.uiautomator.UiDevice.findObject(UiDevice.java:171)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at com.twtrubiks.snapmark.UiTest.waitFor$lambda$0(UiTest.kt:61)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at com.twtrubiks.snapmark.UiTest$$ExternalSyntheticLambda0.invoke(D8$$SyntheticClass:0)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at com.twtrubiks.snapmark.UiTest.poll(UiTest.kt:88)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at com.twtrubiks.snapmark.UiTest.waitFor(UiTest.kt:61)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at com.twtrubiks.snapmark.UiTest.waitFor$default(UiTest.kt:60)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at com.twtrubiks.snapmark.UiTest.find(UiTest.kt:57)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at com.twtrubiks.snapmark.UiTest.openTab(UiTest.kt:73)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at com.twtrubiks.snapmark.PerfTest.drawingOnABusyCanvas(PerfTest.kt:42)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at java.lang.reflect.Method.invoke(Native Method)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at androidx.test.internal.runner.junit4.statement.RunAfters.evaluate(RunAfters.java:61)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:467)
+11-12 04:52:51.626  5649  5665 I GestureController: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2145)
+11-12 04:52:51.628  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:51.628  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/view/View;->getAccessibilityViewId()I (light greylist, reflection)
+11-12 04:52:51.650  1684  1690 W SurfaceFlinger: Attempting to set client state on removed layer: Splash Screen com.twtrubiks.snapmark#0
+11-12 04:52:51.650  1684  1690 W SurfaceFlinger: Attempting to destroy on removed layer: Splash Screen com.twtrubiks.snapmark#0
+11-12 04:52:51.678  5649  5665 D UiObject2: Clicking on (1260, 2868).
+11-12 04:52:51.697  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:51.699  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qwork_2b1e4523-0804-44d0-b4f8-cf9bdcd0cc20\E'].
+11-12 04:52:51.703  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:51.713  1553  3109 W audio_hw_generic: Not supplying enough data to HAL, expected position 7386104 , only wrote 7385760
+11-12 04:52:51.715  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:51.741  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:51.764  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b81a716)
+11-12 04:52:51.764  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b81a716)
+11-12 04:52:51.767  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:51.815  1977  2209 I chatty  : uid=10016(com.android.systemui) RenderThread identical 1 line
+11-12 04:52:51.824  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:52:51.896  5649  5649 W rubiks.snapmar: Accessing hidden method Landroid/content/Context;->getOpPackageName()Ljava/lang/String; (light greylist, linking)
+11-12 04:52:52.765  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8210897)
+11-12 04:52:52.765  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8210897)
+11-12 04:52:52.852  5649  5671 I OpenGLRenderer: Davey! duration=1148ms; Flags=0, IntendedVsync=347568118606, Vsync=347634785270, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=347635169782, AnimationStart=347635186169, PerformTraversalsStart=347641275947, DrawStart=347641431952, SyncQueued=347660344559, SyncStart=347667710466, IssueDrawCommandsStart=347667742450, SwapBuffers=348450521457, FrameCompleted=348723709055, DequeueBufferDuration=102000, QueueBufferDuration=4122000, 
+11-12 04:52:52.857  5649  5649 I Choreographer: Skipped 61 frames!  The application may be doing too much work on its main thread.
+11-12 04:52:53.086  5649  5671 I OpenGLRenderer: Davey! duration=1083ms; Flags=0, IntendedVsync=347709792498, Vsync=348726459124, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=348728070040, AnimationStart=348728095103, PerformTraversalsStart=348732670338, DrawStart=348732821312, SyncQueued=348734962962, SyncStart=348898725475, IssueDrawCommandsStart=348898795158, SwapBuffers=348899077223, FrameCompleted=348956827345, DequeueBufferDuration=37063000, QueueBufferDuration=1933000, 
+11-12 04:52:53.103  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:53.231  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qwork_2b1e4523-0804-44d0-b4f8-cf9bdcd0cc20\E'].
+11-12 04:52:53.231  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:53.249  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:53.351  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qwork_2b1e4523-0804-44d0-b4f8-cf9bdcd0cc20\E'].
+11-12 04:52:53.351  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:53.365  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:53.466  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qwork_2b1e4523-0804-44d0-b4f8-cf9bdcd0cc20\E'].
+11-12 04:52:53.466  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:53.477  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:53.478  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qwork_2b1e4523-0804-44d0-b4f8-cf9bdcd0cc20\E'].
+11-12 04:52:53.478  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:53.487  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:53.488  5649  5665 D UiObject2: Clicking on (377, 1004).
+11-12 04:52:53.506  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qcanvas\E'].
+11-12 04:52:53.506  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:53.695  5649  5665 D UiDevice: Node not found with selector: BySelector [RES='\Qcanvas\E'].
+11-12 04:52:53.759  5649  5654 I rubiks.snapmar: JIT allocated 63KB for stack maps of void com.twtrubiks.snapmark.CanvasScreenKt.CanvasScreen(java.lang.String, boolean, kotlin.jvm.functions.Function0, kotlin.jvm.functions.Function0, androidx.compose.runtime.Composer, int)
+11-12 04:52:53.760  5649  5654 I rubiks.snapmar: Compiler allocated 6MB to compile void com.twtrubiks.snapmark.CanvasScreenKt.CanvasScreen(java.lang.String, boolean, kotlin.jvm.functions.Function0, kotlin.jvm.functions.Function0, androidx.compose.runtime.Composer, int)
+11-12 04:52:53.774  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@278da84)
+11-12 04:52:53.774  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@278da84)
+11-12 04:52:53.795  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qcanvas\E'].
+11-12 04:52:53.796  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:53.975  5649  5678 D ProfileInstaller: Installing profile for com.twtrubiks.snapmark
+11-12 04:52:53.983  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:52:54.770  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@621726d)
+11-12 04:52:54.770  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@621726d)
+11-12 04:52:55.770  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a691ea2)
+11-12 04:52:55.770  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a691ea2)
+11-12 04:52:56.020  5649  5665 D UiDevice: Swiping from (216, 1081) to (1224, 1188) in 60 steps.
+11-12 04:52:56.693  1553  1607 W audio_hw_generic: Not supplying enough data to HAL, expected position 7862346 , only wrote 7624800
+11-12 04:52:56.777  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9639733)
+11-12 04:52:56.778  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9639733)
+11-12 04:52:57.775  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@beb1af0)
+11-12 04:52:57.775  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@beb1af0)
+11-12 04:52:58.773  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@aefc869)
+11-12 04:52:58.776  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@aefc869)
+11-12 04:52:59.775  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@15e82ee)
+11-12 04:52:59.776  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@15e82ee)
+11-12 04:53:00.002  1835  1851 E memtrack: Couldn't load memtrack module
+11-12 04:53:00.002  1835  1851 W android.os.Debug: failed to get memory consumption info: -1
+11-12 04:53:00.029  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:53:00.777  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4fef61c)
+11-12 04:53:00.778  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4fef61c)
+11-12 04:53:01.777  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5338225)
+11-12 04:53:01.781  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5338225)
+11-12 04:53:02.777  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@633dffa)
+11-12 04:53:02.778  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@633dffa)
+11-12 04:53:03.777  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7b0b9ab)
+11-12 04:53:03.777  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7b0b9ab)
+11-12 04:53:04.783  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4135808)
+11-12 04:53:04.783  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4135808)
+11-12 04:53:05.779  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f3f1ba1)
+11-12 04:53:05.779  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f3f1ba1)
+11-12 04:53:06.781  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7d001c6)
+11-12 04:53:06.781  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7d001c6)
+11-12 04:53:07.780  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@93f4587)
+11-12 04:53:07.781  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@93f4587)
+11-12 04:53:08.783  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@489ecb4)
+11-12 04:53:08.783  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@489ecb4)
+11-12 04:53:09.782  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c10d0dd)
+11-12 04:53:09.782  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c10d0dd)
+11-12 04:53:10.783  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@aba7452)
+11-12 04:53:10.784  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@aba7452)
+11-12 04:53:11.783  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a40b323)
+11-12 04:53:11.783  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a40b323)
+11-12 04:53:12.784  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4332020)
+11-12 04:53:12.785  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4332020)
+11-12 04:53:13.782  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@64e9dd9)
+11-12 04:53:13.782  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@64e9dd9)
+11-12 04:53:13.857  1703  1770 E storaged: getDiskStats failed with result NOT_SUPPORTED and size 0
+11-12 04:53:14.790  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@267839e)
+11-12 04:53:14.791  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@267839e)
+11-12 04:53:15.438  5649  5665 D UiDevice: Swiping from (216, 1348) to (1224, 1455) in 60 steps.
+11-12 04:53:15.785  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a615e7f)
+11-12 04:53:15.785  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a615e7f)
+11-12 04:53:16.232  1835  2281 E memtrack: Couldn't load memtrack module
+11-12 04:53:16.232  1835  2281 W android.os.Debug: failed to get memory consumption info: -1
+11-12 04:53:16.786  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b7a1e4c)
+11-12 04:53:16.787  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b7a1e4c)
+11-12 04:53:17.401  1835  1896 I ActivityManager: Killing 2968:com.android.traceur/u0a58 (adj 906): empty #17
+11-12 04:53:17.401  1835  1855 W libprocessgroup: kill(-2968, 9) failed: No such process
+11-12 04:53:17.404  1835  1851 E memtrack: Couldn't load memtrack module
+11-12 04:53:17.404  1835  1851 W android.os.Debug: failed to get memory consumption info: -1
+11-12 04:53:17.419  1835  1851 E memtrack: Couldn't load memtrack module
+11-12 04:53:17.419  1835  1851 W android.os.Debug: failed to get memory consumption info: -1
+11-12 04:53:17.431  1685  1685 I Zygote  : Process 2968 exited due to signal (9)
+11-12 04:53:17.440  1835  1855 W libprocessgroup: kill(-2968, 9) failed: No such process
+11-12 04:53:17.440  1835  1855 I libprocessgroup: Successfully killed process cgroup uid 10058 pid 2968 in 39ms
+11-12 04:53:17.787  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@db7639b)
+11-12 04:53:17.787  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@db7639b)
+11-12 04:53:18.789  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c50d338)
+11-12 04:53:18.789  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c50d338)
+11-12 04:53:19.788  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4152f11)
+11-12 04:53:19.788  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4152f11)
+11-12 04:53:20.793  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9826876)
+11-12 04:53:20.793  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9826876)
+11-12 04:53:20.990  1835  1896 D WificondControl: Scan result ready event
+11-12 04:53:21.788  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@99e9e77)
+11-12 04:53:21.788  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@99e9e77)
+11-12 04:53:22.790  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@3dbeae4)
+11-12 04:53:22.791  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@3dbeae4)
+11-12 04:53:23.794  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@68cab4d)
+11-12 04:53:23.794  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@68cab4d)
+11-12 04:53:24.800  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a49602)
+11-12 04:53:24.800  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a49602)
+11-12 04:53:25.794  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@354ab13)
+11-12 04:53:25.794  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@354ab13)
+11-12 04:53:26.800  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@aded150)
+11-12 04:53:26.801  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@aded150)
+11-12 04:53:27.795  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@885af49)
+11-12 04:53:27.796  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@885af49)
+11-12 04:53:28.797  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7ca104e)
+11-12 04:53:28.798  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7ca104e)
+11-12 04:53:29.795  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c54e56f)
+11-12 04:53:29.795  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c54e56f)
+11-12 04:53:30.799  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e7b27c)
+11-12 04:53:30.807  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e7b27c)
+11-12 04:53:31.799  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2f0f705)
+11-12 04:53:31.799  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2f0f705)
+11-12 04:53:32.800  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ebae35a)
+11-12 04:53:32.801  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ebae35a)
+11-12 04:53:33.799  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@874698b)
+11-12 04:53:33.800  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@874698b)
+11-12 04:53:34.773  5649  5665 D UiDevice: Swiping from (216, 1616) to (1224, 1722) in 60 steps.
+11-12 04:53:34.801  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e3b7a68)
+11-12 04:53:34.802  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e3b7a68)
+11-12 04:53:35.799  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@30efe81)
+11-12 04:53:35.799  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@30efe81)
+11-12 04:53:36.801  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7b3db26)
+11-12 04:53:36.801  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7b3db26)
+11-12 04:53:37.801  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9be1367)
+11-12 04:53:37.801  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9be1367)
+11-12 04:53:38.806  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@881d514)
+11-12 04:53:38.806  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@881d514)
+11-12 04:53:39.803  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fac01bd)
+11-12 04:53:39.803  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fac01bd)
+11-12 04:53:40.806  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9f283b2)
+11-12 04:53:40.807  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9f283b2)
+11-12 04:53:41.809  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e0e7f03)
+11-12 04:53:41.809  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e0e7f03)
+11-12 04:53:42.807  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6312e80)
+11-12 04:53:42.807  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6312e80)
+11-12 04:53:43.803  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@61bfcb9)
+11-12 04:53:43.804  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@61bfcb9)
+11-12 04:53:44.805  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@10128fe)
+11-12 04:53:44.805  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@10128fe)
+11-12 04:53:45.808  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a70085f)
+11-12 04:53:45.809  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a70085f)
+11-12 04:53:46.804  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@cbab2ac)
+11-12 04:53:46.804  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@cbab2ac)
+11-12 04:53:47.803  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@af6ab75)
+11-12 04:53:47.803  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@af6ab75)
+11-12 04:53:48.804  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4c2d70a)
+11-12 04:53:48.804  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4c2d70a)
+11-12 04:53:49.807  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@36cb7b)
+11-12 04:53:49.811  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@36cb7b)
+11-12 04:53:50.808  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5764d98)
+11-12 04:53:50.808  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5764d98)
+11-12 04:53:51.807  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a9389f1)
+11-12 04:53:51.807  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a9389f1)
+11-12 04:53:52.810  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@63f59d6)
+11-12 04:53:52.810  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@63f59d6)
+11-12 04:53:52.812  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7dca457)
+11-12 04:53:52.814  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7dca457)
+11-12 04:53:53.812  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@54eab44)
+11-12 04:53:53.812  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@54eab44)
+11-12 04:53:53.812  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@545d42d)
+11-12 04:53:53.813  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@545d42d)
+11-12 04:53:54.641  5649  5665 D UiDevice: Swiping from (216, 1883) to (1224, 1990) in 60 steps.
+11-12 04:53:54.814  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d2f3d62)
+11-12 04:53:54.814  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d2f3d62)
+11-12 04:53:54.816  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d9d2ef3)
+11-12 04:53:54.817  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d9d2ef3)
+11-12 04:53:55.823  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@32d37b0)
+11-12 04:53:55.824  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@32d37b0)
+11-12 04:53:56.820  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@3588629)
+11-12 04:53:56.820  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@3588629)
+11-12 04:53:57.822  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@247cdae)
+11-12 04:53:57.822  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@247cdae)
+11-12 04:53:58.817  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@bd1c74f)
+11-12 04:53:58.817  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@bd1c74f)
+11-12 04:53:59.825  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9261edc)
+11-12 04:53:59.825  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9261edc)
+11-12 04:54:00.001  1835  1851 E memtrack: Couldn't load memtrack module
+11-12 04:54:00.001  1835  1851 W android.os.Debug: failed to get memory consumption info: -1
+11-12 04:54:00.824  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@24716ba)
+11-12 04:54:00.825  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@24716ba)
+11-12 04:54:01.830  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f0d896b)
+11-12 04:54:01.831  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f0d896b)
+11-12 04:54:02.824  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c644cc8)
+11-12 04:54:02.826  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c644cc8)
+11-12 04:54:03.822  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c9d161)
+11-12 04:54:03.823  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c9d161)
+11-12 04:54:04.823  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5bfe486)
+11-12 04:54:04.824  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5bfe486)
+11-12 04:54:05.826  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ff95147)
+11-12 04:54:05.827  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ff95147)
+11-12 04:54:06.827  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7d56d74)
+11-12 04:54:06.827  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7d56d74)
+11-12 04:54:07.827  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8f1229d)
+11-12 04:54:07.827  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8f1229d)
+11-12 04:54:08.828  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9a5c312)
+11-12 04:54:08.828  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9a5c312)
+11-12 04:54:09.826  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@eefbae3)
+11-12 04:54:09.826  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@eefbae3)
+11-12 04:54:10.829  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@595ece0)
+11-12 04:54:10.829  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@595ece0)
+11-12 04:54:11.826  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4424b99)
+11-12 04:54:11.827  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4424b99)
+11-12 04:54:12.827  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@498fe5e)
+11-12 04:54:12.827  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@498fe5e)
+11-12 04:54:13.829  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d59223f)
+11-12 04:54:13.829  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d59223f)
+11-12 04:54:13.857  1703  1770 E storaged: getDiskStats failed with result NOT_SUPPORTED and size 0
+11-12 04:54:14.830  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@31cf70c)
+11-12 04:54:14.830  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@31cf70c)
+11-12 04:54:14.906  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qcanvas_back\E'].
+11-12 04:54:14.906  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:14.931  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:14.933  5649  5665 D UiObject2: Clicking on (98, 182).
+11-12 04:54:14.944  1553  3109 W audio_hw_generic: Not supplying enough data to HAL, expected position 7624853 , only wrote 7624800
+11-12 04:54:14.950  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qtab_camera\E'].
+11-12 04:54:14.950  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:15.003  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 790528
+11-12 04:54:15.047  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qandroid:id/aerr_close\E'].
+11-12 04:54:15.047  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:15.104  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 790528
+11-12 04:54:15.122  5649  5654 I rubiks.snapmar: Compiler allocated 4MB to compile void com.twtrubiks.snapmark.HomeScreenKt.HomeScreen(java.util.List, kotlin.jvm.functions.Function1, com.twtrubiks.snapmark.ThemeMode, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function0, kotlin.jvm.functions.Function0, kotlin.jvm.functions.Function0, kotlin.jvm.functions.Function0, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function2, kotlin.jvm.functions.Function2, java.lang.String, kotlin.jvm.functions.Function0, androidx.compose.runtime.Composer, int, int, int)
+11-12 04:54:15.302  5649  5665 D UiDevice: Node not found with selector: BySelector [RES='\Qandroid:id/aerr_close\E'].
+11-12 04:54:15.305  1835  1848 I ActivityManager: START u0 {flg=0x10008000 cmp=com.twtrubiks.snapmark/.MainActivity} from uid 10067
+11-12 04:54:15.310  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@4312b68 in: PAUSED
+11-12 04:54:15.332  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:54:15.332  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:15.336  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@4312b68 in: RESUMED
+11-12 04:54:15.337  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@4312b68 in: PAUSED
+11-12 04:54:15.402  5649  5649 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@111cf69
+11-12 04:54:15.407  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:54:15.408  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@8bb02a1 in: PRE_ON_CREATE
+11-12 04:54:15.418  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@8bb02a1 in: CREATED
+11-12 04:54:15.421  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@8bb02a1 in: STARTED
+11-12 04:54:15.423  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@8bb02a1 in: RESUMED
+11-12 04:54:15.490  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:54:15.499  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:54:15.518  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:54:15.567  1684  1684 D SurfaceFlinger: duplicate layer name: changing com.twtrubiks.snapmark/com.twtrubiks.snapmark.MainActivity to com.twtrubiks.snapmark/com.twtrubiks.snapmark.MainActivity#1
+11-12 04:54:15.576  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:54:15.581  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:54:15.583  1565  1623 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:54:15.587  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:54:15.678  5649  5665 W ByMatcher: Node returned null child: android.view.accessibility.AccessibilityNodeInfo@80006cf4; boundsInParent: Rect(0, 0 - 1440, 3120); boundsInScreen: Rect(0, 0 - 1440, 3120); packageName: com.twtrubiks.snapmark; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; contentDescription: null; tooltipText: null; viewIdResName: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: true; visible: true; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]
+11-12 04:54:15.678  5649  5665 W ByMatcher: Skipping null child (0 of 2)
+11-12 04:54:15.678  5649  5665 W ByMatcher: Skipping null child (1 of 2)
+11-12 04:54:15.678  5649  5665 W ByMatcher: Node returned null child: android.view.accessibility.AccessibilityNodeInfo@80006cf4; boundsInParent: Rect(0, 0 - 1440, 3120); boundsInScreen: Rect(0, 0 - 1440, 3120); packageName: com.twtrubiks.snapmark; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; contentDescription: null; tooltipText: null; viewIdResName: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: true; visible: true; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]
+11-12 04:54:15.678  5649  5665 W ByMatcher: Skipping null child (0 of 2)
+11-12 04:54:15.679  5649  5665 W ByMatcher: Skipping null child (1 of 2)
+11-12 04:54:15.708  5649  5671 D EGL_emulation: eglMakeCurrent: 0x79eb6fdeabe0: ver 3 0 (tinfo 0x79eb6fcc1f40)
+11-12 04:54:15.755  1835  1860 I ActivityManager: Displayed com.twtrubiks.snapmark/.MainActivity: +359ms
+11-12 04:54:15.828  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d5d0fb1)
+11-12 04:54:15.829  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d5d0fb1)
+11-12 04:54:15.882  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:54:15.932  1684  1864 W SurfaceFlinger: Attempting to set client state on removed layer: Splash Screen com.twtrubiks.snapmark#0
+11-12 04:54:15.932  1684  1864 W SurfaceFlinger: Attempting to destroy on removed layer: Splash Screen com.twtrubiks.snapmark#0
+11-12 04:54:15.979  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:54:16.059  1977  2209 I chatty  : uid=10016(com.android.systemui) RenderThread identical 2 lines
+11-12 04:54:16.102  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:54:16.127  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@4312b68 in: STOPPED
+11-12 04:54:16.149  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@4312b68 in: DESTROYED
+11-12 04:54:16.169  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:54:16.175  5649  5665 D UiDevice: Node not found with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:54:16.177  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:54:16.204  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:54:16.276  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qtab_works\E'].
+11-12 04:54:16.276  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:16.302  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:16.306  5649  5665 D UiObject2: Clicking on (1260, 2868).
+11-12 04:54:16.325  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qwork_2b1e4523-0804-44d0-b4f8-cf9bdcd0cc20\E'].
+11-12 04:54:16.325  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:16.370  1835  2281 E memtrack: Couldn't load memtrack module
+11-12 04:54:16.370  1835  2281 W android.os.Debug: failed to get memory consumption info: -1
+11-12 04:54:16.626  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:16.829  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@81f5ed)
+11-12 04:54:16.829  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@81f5ed)
+11-12 04:54:16.870  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qwork_2b1e4523-0804-44d0-b4f8-cf9bdcd0cc20\E'].
+11-12 04:54:16.871  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:16.880  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:16.981  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qwork_2b1e4523-0804-44d0-b4f8-cf9bdcd0cc20\E'].
+11-12 04:54:16.982  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:16.990  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:17.091  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qwork_2b1e4523-0804-44d0-b4f8-cf9bdcd0cc20\E'].
+11-12 04:54:17.091  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:17.099  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:17.100  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qwork_2b1e4523-0804-44d0-b4f8-cf9bdcd0cc20\E'].
+11-12 04:54:17.100  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:17.106  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:17.107  5649  5665 D UiObject2: Clicking on (377, 1004).
+11-12 04:54:17.130  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qcanvas\E'].
+11-12 04:54:17.130  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:17.228  5649  5665 D UiDevice: Node not found with selector: BySelector [RES='\Qcanvas\E'].
+11-12 04:54:17.323  1701  2572 W DnsTlsSocket: SSL_connect error 5, errno=111
+11-12 04:54:17.328  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qcanvas\E'].
+11-12 04:54:17.328  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:17.402  1835  1851 E memtrack: Couldn't load memtrack module
+11-12 04:54:17.402  1835  1851 W android.os.Debug: failed to get memory consumption info: -1
+11-12 04:54:17.567  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:54:17.829  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@11486b3)
+11-12 04:54:17.829  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@11486b3)
+11-12 04:54:18.829  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@83a1470)
+11-12 04:54:18.829  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@83a1470)
+11-12 04:54:18.847  1835  1953 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+11-12 04:54:19.576  5649  5665 D UiDevice: Swiping from (216, 1081) to (1224, 1188) in 60 steps.
+11-12 04:54:19.582  1714  1724 D hwcomposer: hw_composer sent 24 syncs in 95s
+11-12 04:54:19.829  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@19503e9)
+11-12 04:54:19.830  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@19503e9)
+11-12 04:54:20.314  1553  1607 W audio_hw_generic: Not supplying enough data to HAL, expected position 8138282 , only wrote 7882560
+11-12 04:54:20.831  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2d9d86e)
+11-12 04:54:20.831  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2d9d86e)
+11-12 04:54:21.836  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9c6db0f)
+11-12 04:54:21.836  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9c6db0f)
+11-12 04:54:22.833  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d04079c)
+11-12 04:54:22.833  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d04079c)
+11-12 04:54:23.832  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@3b0f5a5)
+11-12 04:54:23.832  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@3b0f5a5)
+11-12 04:54:24.835  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fcf0d7a)
+11-12 04:54:24.836  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fcf0d7a)
+11-12 04:54:25.841  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7a0192b)
+11-12 04:54:25.841  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7a0192b)
+11-12 04:54:26.836  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9180188)
+11-12 04:54:26.836  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9180188)
+11-12 04:54:27.840  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6e04721)
+11-12 04:54:27.840  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6e04721)
+11-12 04:54:28.835  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7b08746)
+11-12 04:54:28.836  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7b08746)
+11-12 04:54:29.774  5649  5665 D UiDevice: Swiping from (216, 1348) to (1224, 1455) in 60 steps.
+11-12 04:54:29.836  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5851d07)
+11-12 04:54:29.837  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5851d07)
+11-12 04:54:30.837  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2efae34)
+11-12 04:54:30.838  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2efae34)
+11-12 04:54:31.839  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@759345d)
+11-12 04:54:31.839  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@759345d)
+11-12 04:54:32.842  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@bddd1d2)
+11-12 04:54:32.842  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@bddd1d2)
+11-12 04:54:33.839  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@dcc82a3)
+11-12 04:54:33.840  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@dcc82a3)
+11-12 04:54:34.841  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@cf379a0)
+11-12 04:54:34.841  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@cf379a0)
+11-12 04:54:35.845  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@479b959)
+11-12 04:54:35.845  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@479b959)
+11-12 04:54:36.843  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@223391e)
+11-12 04:54:36.843  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@223391e)
+11-12 04:54:37.851  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f9aa5ff)
+11-12 04:54:37.851  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f9aa5ff)
+11-12 04:54:38.844  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5a68fcc)
+11-12 04:54:38.844  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5a68fcc)
+11-12 04:54:39.846  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b839215)
+11-12 04:54:39.846  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b839215)
+11-12 04:54:40.038  5649  5665 D UiDevice: Swiping from (216, 1616) to (1224, 1722) in 60 steps.
+11-12 04:54:40.045  1701  3218 W DnsTlsSocket: SSL_connect error 5, errno=111
+11-12 04:54:40.847  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ec5c92a)
+11-12 04:54:40.847  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ec5c92a)
+11-12 04:54:41.847  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@dfda31b)
+11-12 04:54:41.847  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@dfda31b)
+11-12 04:54:42.852  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e92dcb8)
+11-12 04:54:42.852  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e92dcb8)
+11-12 04:54:43.855  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2183a91)
+11-12 04:54:43.855  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2183a91)
+11-12 04:54:44.856  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@34f4df6)
+11-12 04:54:44.856  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@34f4df6)
+11-12 04:54:45.853  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4c955f7)
+11-12 04:54:45.853  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4c955f7)
+11-12 04:54:46.854  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5f50c64)
+11-12 04:54:46.854  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5f50c64)
+11-12 04:54:47.856  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c74eecd)
+11-12 04:54:47.856  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c74eecd)
+11-12 04:54:48.857  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e1a5382)
+11-12 04:54:48.857  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e1a5382)
+11-12 04:54:49.852  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f335a93)
+11-12 04:54:49.852  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f335a93)
+11-12 04:54:50.360  5649  5665 D UiDevice: Swiping from (216, 1883) to (1224, 1990) in 60 steps.
+11-12 04:54:50.854  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f288ad0)
+11-12 04:54:50.854  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f288ad0)
+11-12 04:54:51.853  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b6eaac9)
+11-12 04:54:51.853  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b6eaac9)
+11-12 04:54:52.854  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@69e25ce)
+11-12 04:54:52.854  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@69e25ce)
+11-12 04:54:53.854  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c2f0cef)
+11-12 04:54:53.855  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c2f0cef)
+11-12 04:54:54.858  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5d383fc)
+11-12 04:54:54.858  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5d383fc)
+11-12 04:54:55.862  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e2e2a85)
+11-12 04:54:55.862  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e2e2a85)
+11-12 04:54:56.864  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@27ad0da)
+11-12 04:54:56.868  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@27ad0da)
+11-12 04:54:57.859  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c89890b)
+11-12 04:54:57.859  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c89890b)
+11-12 04:54:57.862  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7d2e3e8)
+11-12 04:54:57.862  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7d2e3e8)
+11-12 04:54:58.861  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@3abea01)
+11-12 04:54:58.861  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@3abea01)
+11-12 04:54:59.866  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f4520a6)
+11-12 04:54:59.866  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f4520a6)
+11-12 04:55:00.034  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:55:00.756  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qcanvas_back\E'].
+11-12 04:55:00.757  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:55:00.765  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:55:00.765  5649  5665 D UiObject2: Clicking on (98, 182).
+11-12 04:55:00.780  1553  3109 W audio_hw_generic: Not supplying enough data to HAL, expected position 7882711 , only wrote 7882560
+11-12 04:55:00.783  5649  5665 D UiDevice: Retrieving node with selector: BySelector [RES='\Qtab_camera\E'].
+11-12 04:55:00.783  5649  5665 W QueryController: Could not detect idle state.
+11-12 04:55:00.836  5649  5665 I TestRunner: finished: drawingOnABusyCanvas(com.twtrubiks.snapmark.PerfTest)
+11-12 04:55:00.839  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:00.839  5649  5649 I MonitoringInstr: Finishing activity: com.twtrubiks.snapmark.MainActivity@8bb02a1
+11-12 04:55:00.842  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@8bb02a1 in: PAUSED
+11-12 04:55:00.862  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d12a132)
+11-12 04:55:00.862  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d12a132)
+11-12 04:55:00.891  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:00.894  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:55:00.899  1565  1565 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+11-12 04:55:00.906  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:55:00.930  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 790528
+11-12 04:55:00.942  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:00.957  2452  2665 D EGL_emulation: eglMakeCurrent: 0x79eb63aa8620: ver 3 0 (tinfo 0x79eb6fdb3740)
+11-12 04:55:00.994  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:01.044  5649  5665 I chatty  : uid=10067(com.twtrubiks.snapmark) identical 1 line
+11-12 04:55:01.094  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:01.116  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:55:01.133  1565  1565 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 17973248
+11-12 04:55:01.144  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:01.195  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:01.218  2452  2487 D         : HostConnection::get() New Host Connection established 0x79eb6fdac060, tid 2487
+11-12 04:55:01.247  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:01.297  5649  5665 I chatty  : uid=10067(com.twtrubiks.snapmark) identical 1 line
+11-12 04:55:01.347  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:01.365  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:55:01.397  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:01.412  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:55:01.448  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:01.448  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:55:01.498  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:01.517  1977  2209 D EGL_emulation: eglMakeCurrent: 0x79eb7303d9a0: ver 3 0 (tinfo 0x79eb730982e0)
+11-12 04:55:01.549  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:01.599  5649  5665 I chatty  : uid=10067(com.twtrubiks.snapmark) identical 1 line
+11-12 04:55:01.649  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:01.665  5649  5671 D EGL_emulation: eglMakeCurrent: 0x79eb6fdeabe0: ver 3 0 (tinfo 0x79eb6fcc1f40)
+11-12 04:55:01.700  5649  5665 I MonitoringInstr: Unstopped activity count: 1
+11-12 04:55:01.722  1835  4941 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+11-12 04:55:01.722  1835  4941 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+11-12 04:55:01.722  1835  4941 I OpenGLRenderer: Initialized EGL, version 1.4
+11-12 04:55:01.722  1835  4941 D OpenGLRenderer: Swap behavior 1
+11-12 04:55:01.724  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@8bb02a1 in: STOPPED
+11-12 04:55:01.739  5649  5649 D LifecycleMonitor: Lifecycle status change: com.twtrubiks.snapmark.MainActivity@8bb02a1 in: DESTROYED
+11-12 04:55:01.744  1684  2236 W SurfaceFlinger: Attempting to destroy on removed layer: AppWindowToken{c7a35b token=Token{4f2a26a ActivityRecord{5e30855 u0 com.twtrubiks.snapmark/.MainActivity t15}}}#0
+11-12 04:55:01.750  5649  5665 I TestRunner: run finished: 1 tests, 0 failed, 0 ignored
+11-12 04:55:01.752  1835  1848 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@f20df06
+11-12 04:55:01.752  1835  1835 V SettingsProvider: Notifying for 0: content://settings/secure/accessibility_enabled
+11-12 04:55:01.753  1835  2281 I ActivityManager: Force stopping com.twtrubiks.snapmark appid=10067 user=0: finished inst
+11-12 04:55:01.754  1835  2281 I ActivityManager: Killing 5649:com.twtrubiks.snapmark/u0a67 (adj 0): stop com.twtrubiks.snapmark
+11-12 04:55:01.754  1835  1855 W libprocessgroup: kill(-5649, 9) failed: No such process
+11-12 04:55:01.760  1835  5716 W Binder  : Outgoing transactions from this process must be FLAG_ONEWAY
+11-12 04:55:01.760  1835  5716 W Binder  : java.lang.Throwable
+11-12 04:55:01.760  1835  5716 W Binder  : 	at android.os.BinderProxy.transact(Binder.java:1114)
+11-12 04:55:01.760  1835  5716 W Binder  : 	at android.app.IInstrumentationWatcher$Stub$Proxy.instrumentationFinished(IInstrumentationWatcher.java:164)
+11-12 04:55:01.760  1835  5716 W Binder  : 	at com.android.server.am.InstrumentationReporter$MyThread.run(InstrumentationReporter.java:86)
+11-12 04:55:01.760  5639  5639 D AndroidRuntime: Shutting down VM
+11-12 04:55:01.779  1835  4941 D EGL_emulation: eglCreateContext: 0x79eb5e30eba0: maj 3 min 0 rcv 3
+11-12 04:55:01.781  1835  4941 D EGL_emulation: eglMakeCurrent: 0x79eb5e30eba0: ver 3 0 (tinfo 0x79eb5b2d95a0)
+11-12 04:55:01.802  1835  1855 W libprocessgroup: kill(-5649, 9) failed: No such process
+11-12 04:55:01.813  1685  1685 I Zygote  : Process 5649 exited due to signal (9)
+11-12 04:55:01.827  1835  1860 W ActivityManager: setHasOverlayUi called on unknown pid: 5649
+11-12 04:55:01.848  1835  1855 W libprocessgroup: kill(-5649, 9) failed: No such process
+11-12 04:55:01.848  1835  1855 I libprocessgroup: Successfully killed process cgroup uid 10067 pid 5649 in 93ms
+11-12 04:55:01.866  1835  1893 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fa74f65)
+11-12 04:55:01.866  1835  1851 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fa74f65)
+11-12 04:55:01.985  1835  1896 I ActivityManager: Force stopping com.twtrubiks.snapmark appid=10067 user=0: from pid 5720
+11-12 04:55:01.991  2055  2055 D CarrierSvcBindHelper: No carrier app for: 0

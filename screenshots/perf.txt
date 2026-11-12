@@ -1,0 +1,23 @@
+畫布上已經有 40 條筆畫（每條 80 個點），每種畫法再畫 4 筆
+
+== 改之前（一層，每一格全部重畫）
+每一筆花的時間（毫秒，60 步，不卡的話大約 300）：19017, 18935, 19467, 19730
+Total frames rendered: 487
+Janky frames: 487 (100.00%)
+50th percentile: 150ms
+90th percentile: 250ms
+95th percentile: 250ms
+99th percentile: 300ms
+Number Slow UI thread: 204
+Number Slow issue draw commands: 487
+
+== 分兩層（只重畫正在畫的那一筆）
+每一筆花的時間（毫秒，60 步，不卡的話大約 300）：9797, 9863, 9921, 9972
+Total frames rendered: 487
+Janky frames: 487 (100.00%)
+50th percentile: 105ms
+90th percentile: 150ms
+95th percentile: 150ms
+99th percentile: 150ms
+Number Slow UI thread: 151
+Number Slow issue draw commands: 487

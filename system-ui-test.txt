@@ -1,0 +1,8 @@
+
+com.twtrubiks.snapmark.SystemUiTest:........
+
+Time: 96.179
+
+OK (8 tests)
+
+
