@@ -180,11 +180,11 @@ fun SnapMarkApp(sharedImage: Uri? = null, onSharedImageTaken: () -> Unit = {}) {
                             onOpen = { push(Route.Canvas(it, isNew = false)) },
                             saved = savedWork,
                             onSavedShown = { savedWork = null },
-                            galleryCount = { work -> withContext(container.worksDispatcher) { container.galleryImagesOf(work.id).size } },
+                            galleryCount = { works -> withContext(container.worksDispatcher) { works.sumOf { container.galleryImagesOf(it.id).size } } },
                             // 資料夾（底圖、縮圖）整個刪掉；離開首頁也會刪完
-                            onDelete = { work, withGallery ->
+                            onDelete = { works, withGallery ->
                                 container.background.launch {
-                                    val failed = container.deleteWork(work.id, withGallery)
+                                    val failed = works.sumOf { container.deleteWork(it.id, withGallery) }
                                     if (failed > 0) {
                                         withContext(Dispatchers.Main) {
                                             Toast.makeText(container.context, "相簿裡有 $failed 張圖刪不掉，請到相簿 App 刪除", Toast.LENGTH_LONG).show()

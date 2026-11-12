@@ -206,7 +206,9 @@ class SystemUiTest : UiTest() {
 
         // 存好了自己回到作品分頁
         waitFor(By.res("saved_snackbar"))
+        // 長按開始多選，再按上面的「刪除」
         waitFor(By.res("work_${photo.id}")).longClick()
+        waitFor(By.res("select_delete")).click()
         val box = waitFor(By.res("delete_gallery"))
         assertTrue("一併刪除應該預設不勾", !box.isChecked)
         waitFor(By.text("一併刪除存到相簿的 1 張圖"))

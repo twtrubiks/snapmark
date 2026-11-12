@@ -1,6 +1,7 @@
 package com.twtrubiks.snapmark
 
 import android.util.Log
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -51,6 +52,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -97,9 +99,11 @@ enum class HomeTab(val title: String, val header: String, val subtext: String, v
 }
 
 /**
- * 四個分頁：相機、照片、空白都會開一張新的作品進畫布，「作品」是縮圖的格線（點一下打開、長按刪除）。
+ * 四個分頁：相機、照片、空白都會開一張新的作品進畫布，「作品」是縮圖的格線（點一下打開、長按開始多選）。
  * 最上面一排：App 的名字、右上角的深色模式（[theme]，選了呼叫 [onTheme]）。[works] 是 null 表示還在讀。
- * [thumbFile]：作品的縮圖檔（`WorkStore.thumbFile`）。[galleryCount]：那張作品存到相簿、還在相簿裡的有幾張（刪除時問要不要一起刪）；
+ * 多選（長按一張作品開始）：最上面一排換成 ✕、「已選 N 張」、全選、刪除，點縮圖是選／取消選；
+ * 不能左右滑、分頁列不能按，返回鍵是離開多選，一張都沒選就自己離開。轉螢幕時選到的留著。
+ * [thumbFile]：作品的縮圖檔（`WorkStore.thumbFile`）。[galleryCount]：那幾張作品存到相簿、還在相簿裡的總共幾張（刪除時問要不要一起刪）；
  * [onDelete] 的第二個參數是使用者勾了「一併刪除存到相簿的圖」。[onOpen] 打開作品（id）。
  * [saved]：剛存到相簿、離開畫布的那張作品的 id：換到「作品」分頁、捲到最上面（那張排在最前面），
  * 下面提示「已存到相簿」，按「繼續改」打開它；開始提示時呼叫 [onSavedShown]（清掉，回到首頁時不會再提示一次）。
@@ -115,8 +119,8 @@ fun HomeScreen(
     onPhotosFromApp: () -> Unit,
     onBlank: () -> Unit,
     onOpen: (String) -> Unit,
-    galleryCount: suspend (Work) -> Int,
-    onDelete: (Work, withGallery: Boolean) -> Unit,
+    galleryCount: suspend (List<Work>) -> Int,
+    onDelete: (List<Work>, withGallery: Boolean) -> Unit,
     saved: String? = null,
     onSavedShown: () -> Unit = {},
 ) {
@@ -125,6 +129,19 @@ fun HomeScreen(
     val worksGrid = rememberLazyStaggeredGridState()
     val snackbar = remember { SnackbarHostState() }
     val latestWorks by rememberUpdatedState(works)
+    // 多選：選到的作品 id。已經不在的（刪掉了）不算
+    var selectedIds by rememberSaveable(
+        stateSaver = listSaver<Set<String>, String>(save = { it.toList() }, restore = { it.toSet() }),
+    ) { mutableStateOf(emptySet()) }
+    val selected = works.orEmpty().filter { it.id in selectedIds }
+    val selecting = selected.isNotEmpty()
+    // 按了「刪除」：問過才刪。轉螢幕時對話框留著
+    var confirmDelete by rememberSaveable { mutableStateOf(false) }
+    val toggle = { id: String ->
+        confirmDelete = false
+        selectedIds = if (id in selectedIds) selectedIds - id else selectedIds + id
+    }
+    BackHandler(enabled = selecting) { selectedIds = emptySet() }
     LaunchedEffect(saved) {
         val id = saved ?: return@LaunchedEffect
         // 提示放在 scope 裡：清掉 saved 時這個 LaunchedEffect 會被取消，提示不能跟著不見
@@ -141,21 +158,32 @@ fun HomeScreen(
         onSavedShown()
     }
     Column(Modifier.fillMaxSize()) {
-        Row(
-            Modifier.fillMaxWidth().padding(start = 20.dp, end = 4.dp, top = 4.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Text(
-                "SnapMark",
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.weight(1f),
+        if (selecting) {
+            SelectionBar(
+                count = selected.size,
+                allSelected = selected.size == works.orEmpty().size,
+                onClose = { selectedIds = emptySet() },
+                onSelectAll = { all -> selectedIds = if (all) works.orEmpty().map { it.id }.toSet() else emptySet() },
+                onDelete = { confirmDelete = true },
             )
-            ThemeMenu(theme, onTheme)
+        } else {
+            Row(
+                Modifier.fillMaxWidth().padding(start = 20.dp, end = 4.dp, top = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    "SnapMark",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.weight(1f),
+                )
+                ThemeMenu(theme, onTheme)
+            }
         }
         Box(Modifier.weight(1f)) {
-            HorizontalPager(state = pager, modifier = Modifier.fillMaxSize()) { page ->
+            // 多選的時候不能滑到別頁（最上面那一排是多選的，別頁用不到）
+            HorizontalPager(state = pager, userScrollEnabled = !selecting, modifier = Modifier.fillMaxSize()) { page ->
                 when (val tab = HomeTab.entries[page]) {
                     HomeTab.CAMERA -> StartPage(tab, R.drawable.ic_camera, "開相機", "camera_button", onCamera)
                     HomeTab.PHOTOS -> StartPage(tab, R.drawable.ic_photo_library, "選照片", "photos_button", onPhotos) {
@@ -164,7 +192,7 @@ fun HomeScreen(
                         }
                     }
                     HomeTab.BLANK -> StartPage(tab, R.drawable.ic_edit, "開一張空白畫布", "blank_button", onBlank)
-                    HomeTab.WORKS -> WorksPage(tab, works, worksGrid, thumbFile, onOpen, galleryCount, onDelete)
+                    HomeTab.WORKS -> WorksPage(tab, works, worksGrid, thumbFile, selectedIds.takeIf { selecting }, onOpen, toggle)
                 }
             }
             // 「已存到相簿」：蓋在分頁上、分頁列的上面（「繼續改」用 By.text 找）
@@ -177,18 +205,74 @@ fun HomeScreen(
             HomeTab.entries.forEachIndexed { index, tab ->
                 TextButton(
                     onClick = { scope.launch { pager.animateScrollToPage(index) } },
+                    enabled = !selecting,
                     modifier = Modifier.weight(1f).testTag(tab.tag),
                 ) {
                     Text(
                         tab.title,
-                        color = if (pager.currentPage == index) {
-                            MaterialTheme.colorScheme.primary
-                        } else {
-                            MaterialTheme.colorScheme.onSurfaceVariant
+                        color = when {
+                            selecting -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.38f)
+                            pager.currentPage == index -> MaterialTheme.colorScheme.primary
+                            else -> MaterialTheme.colorScheme.onSurfaceVariant
                         },
                     )
                 }
             }
+        }
+    }
+    if (confirmDelete && selecting) {
+        // 先查好相簿裡還有幾張（一下子）才出對話框：勾選那一格不會晚一點才冒出來
+        val count by produceState<Int?>(null, selected.map { it.id }) { value = galleryCount(selected) }
+        count?.let { galleryImages ->
+            DeleteDialog(
+                selected.size,
+                galleryImages,
+                onConfirm = { withGallery ->
+                    confirmDelete = false
+                    selectedIds = emptySet()
+                    onDelete(selected, withGallery)
+                },
+                onDismiss = { confirmDelete = false },
+            )
+        }
+    }
+}
+
+/**
+ * 多選時最上面那一排：✕（`select_close`）、「已選 N 張」、全選（`select_all`，全部選到時是「取消全選」）、刪除（`select_delete`）。
+ */
+@Composable
+private fun SelectionBar(
+    count: Int,
+    allSelected: Boolean,
+    onClose: () -> Unit,
+    onSelectAll: (Boolean) -> Unit,
+    onDelete: () -> Unit,
+) {
+    Row(
+        Modifier.fillMaxWidth().padding(start = 4.dp, end = 4.dp, top = 4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        IconButton(onClick = onClose, modifier = Modifier.testTag("select_close")) {
+            Icon(painterResource(R.drawable.ic_close), contentDescription = "取消選取")
+        }
+        Text(
+            "已選 $count 張",
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.weight(1f).padding(start = 4.dp),
+        )
+        TextButton(onClick = { onSelectAll(!allSelected) }, modifier = Modifier.testTag("select_all")) {
+            Text(if (allSelected) "取消全選" else "全選")
+        }
+        TextButton(
+            onClick = onDelete,
+            colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error),
+            modifier = Modifier.testTag("select_delete"),
+        ) {
+            Icon(painterResource(R.drawable.ic_delete), contentDescription = null, modifier = Modifier.size(18.dp))
+            Spacer(Modifier.width(4.dp))
+            Text("刪除")
         }
     }
 }
@@ -322,18 +406,17 @@ private fun BigRoundButton(icon: Int, label: String, tag: String, onClick: () ->
     }
 }
 
+/** [selectedIds]：多選中選到的作品，null 是沒有在多選。點縮圖：多選中是 [onToggle]，不然 [onOpen]；長按一律 [onToggle]。 */
 @Composable
 private fun WorksPage(
     tab: HomeTab,
     works: List<Work>?,
     grid: LazyStaggeredGridState,
     thumbFile: (String) -> File,
+    selectedIds: Set<String>?,
     onOpen: (String) -> Unit,
-    galleryCount: suspend (Work) -> Int,
-    onDelete: (Work, withGallery: Boolean) -> Unit,
+    onToggle: (String) -> Unit,
 ) {
-    // 長按的那一張：問過才刪。轉螢幕時對話框留著
-    var deletingId by rememberSaveable { mutableStateOf<String?>(null) }
     when {
         works == null -> Unit
         works.isEmpty() -> Column(
@@ -363,7 +446,7 @@ private fun WorksPage(
                 Column(Modifier.padding(bottom = 4.dp)) {
                     Text(tab.header, style = MaterialTheme.typography.headlineSmall)
                     Text(
-                        "點一下繼續改，長按可以刪除",
+                        "點一下繼續改，長按可以選取、刪除",
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -373,26 +456,12 @@ private fun WorksPage(
                 WorkThumb(
                     work,
                     thumbFile(work.id),
+                    picked = selectedIds?.let { work.id in it },
                     onOpen = { onOpen(work.id) },
-                    onLongPress = { deletingId = work.id },
+                    onToggle = { onToggle(work.id) },
                     modifier = Modifier.animateItem(),
                 )
             }
-        }
-    }
-    val deleting = deletingId?.let { id -> works?.find { it.id == id } }
-    if (deleting != null) {
-        // 先查好相簿裡還有幾張（一下子）才出對話框：勾選那一格不會晚一點才冒出來
-        val count by produceState<Int?>(null, deleting.id) { value = galleryCount(deleting) }
-        count?.let { galleryImages ->
-            DeleteDialog(
-                galleryImages,
-                onConfirm = { withGallery ->
-                    deletingId = null
-                    onDelete(deleting, withGallery)
-                },
-                onDismiss = { deletingId = null },
-            )
         }
     }
 }
@@ -400,9 +469,47 @@ private fun WorksPage(
 /**
  * 一張作品的縮圖（`thumb.jpg`，畫上標註之後的樣子）。testTag 是 `work_<id>`；
  * 說明文字（TalkBack 唸的、測試用 `By.descContains` 找的）是「照片／空白畫布，N 個標註」。
+ * [picked]：多選中這一張有沒有選到（null 是沒有在多選）。多選中左上角有一個圈，選到的打勾、外框變粗；
+ * 圈只是畫上去的，按的還是縮圖本身（testTag、`selected` 都在縮圖上）。
  */
 @Composable
-private fun WorkThumb(work: Work, thumb: File, onOpen: () -> Unit, onLongPress: () -> Unit, modifier: Modifier = Modifier) {
+private fun WorkThumb(
+    work: Work,
+    thumb: File,
+    picked: Boolean?,
+    onOpen: () -> Unit,
+    onToggle: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val primary = MaterialTheme.colorScheme.primary
+    Box(modifier) {
+        WorkImage(work, thumb, picked, onOpen, onToggle)
+        if (picked != null) {
+            Box(
+                Modifier
+                    .align(Alignment.TopStart)
+                    .padding(8.dp)
+                    .size(24.dp)
+                    .clip(CircleShape)
+                    .background(if (picked) primary else MaterialTheme.colorScheme.surface.copy(alpha = 0.7f))
+                    .border(2.dp, if (picked) primary else MaterialTheme.colorScheme.outline, CircleShape),
+                contentAlignment = Alignment.Center,
+            ) {
+                if (picked) {
+                    Icon(
+                        painterResource(R.drawable.ic_check),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onPrimary,
+                        modifier = Modifier.size(16.dp),
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun WorkImage(work: Work, thumb: File, picked: Boolean?, onOpen: () -> Unit, onToggle: () -> Unit) {
     val shape = RoundedCornerShape(12.dp)
     AsyncImage(
         // 每存一次 updatedAt 就變：換一個 key，不會拿到記憶體裡舊的那張
@@ -414,29 +521,41 @@ private fun WorkThumb(work: Work, thumb: File, onOpen: () -> Unit, onLongPress: 
         contentScale = ContentScale.Crop,
         // 縮圖還沒寫好（剛離開畫布）是正常的，下次重讀就有；檔案在卻讀不出來才是問題（release 冒煙測試看這一行）
         onError = { if (thumb.exists()) Log.w("SnapMark", "縮圖讀不到：${work.id}", it.result.throwable) },
-        modifier = modifier
+        modifier = Modifier
             .fillMaxWidth()
             .aspectRatio((work.width.toFloat() / work.height).coerceIn(0.5f, 2f))
             .clip(shape)
             // 縮圖讀到之前：空白畫布就是白的，照片先用灰色
             .background(if (work.hasBase) MaterialTheme.colorScheme.surfaceVariant else Color.White)
-            .border(1.dp, MaterialTheme.colorScheme.outlineVariant, shape)
-            .combinedClickable(onClickLabel = "打開", onLongClickLabel = "刪除", onLongClick = onLongPress, onClick = onOpen)
+            .then(
+                if (picked == true) {
+                    Modifier.border(3.dp, MaterialTheme.colorScheme.primary, shape)
+                } else {
+                    Modifier.border(1.dp, MaterialTheme.colorScheme.outlineVariant, shape)
+                },
+            )
+            .combinedClickable(
+                onClickLabel = if (picked == null) "打開" else "選取",
+                onLongClickLabel = "選取",
+                onLongClick = onToggle,
+                onClick = if (picked == null) onOpen else onToggle,
+            )
+            .then(if (picked != null) Modifier.semantics { selected = picked } else Modifier)
             .testTag("work_${work.id}"),
     )
 }
 
 /**
- * 刪除前確認：資料夾整個刪掉，找不回來。對話框是另一個視窗，testTag 要再開一次。
- * 這張作品有存到相簿、相簿裡還在（[galleryImages] 張）的話，多一格「一併刪除存到相簿的 N 張圖」，預設不勾
+ * 刪除前確認（多選的 [works] 張）：資料夾整個刪掉，找不回來。對話框是另一個視窗，testTag 要再開一次。
+ * 這幾張作品有存到相簿、相簿裡還在（加起來 [galleryImages] 張）的話，多一格「一併刪除存到相簿的 N 張圖」，預設不勾
  * （2026-11-05 使用者要的）。轉螢幕時勾的留著。
  */
 @Composable
-private fun DeleteDialog(galleryImages: Int, onConfirm: (withGallery: Boolean) -> Unit, onDismiss: () -> Unit) {
+private fun DeleteDialog(works: Int, galleryImages: Int, onConfirm: (withGallery: Boolean) -> Unit, onDismiss: () -> Unit) {
     var withGallery by rememberSaveable { mutableStateOf(false) }
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("刪除這張作品？") },
+        title = { Text(if (works == 1) "刪除這張作品？" else "刪除這 $works 張作品？") },
         text = {
             Column {
                 Text(

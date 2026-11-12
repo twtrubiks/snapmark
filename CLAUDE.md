@@ -7,14 +7,12 @@ Kotlin + Jetpack Compose 原生 App，在 claude.ai/code 雲端 session 開發�
 
 ## 目前的狀態
 
-- **規格裡的功能都做完了**（下面「規格」寫的就是現在的樣子）：三個入口、畫布的七種工具、選取、復原／重做、自動存檔、
-  裁切與旋轉、存到相簿與分享、作品分頁、深色模式、別的 App 分享圖片進來
 - **只在 Android 9（API 28）的模擬器上跑過**，`DeviceTest`、`DemoRecordingTest`、`SystemUiTest`、release 冒煙測試都通過。還沒試過的：
   - Android 10 以上（存到相簿、照片挑選器、相機的畫面都不一樣）
   - 真的手機（畫的時候的效能、觸控的手感）
   - 有好幾個相簿 App 的手機上的「用其他 App 選」（AOSP 只有系統的檔案畫面會選圖，沒出現「選擇 App」）
   - Android 12 以上的桌布取色（Android 9 是 Material 3 預設的紫色）
-- **第一版是 `1.0.0`**（2026-11-06 推 tag `v1.0.0` 發的）。之後發版見「專案約定」的發版
+- **第一版是 `1.0.0`**（推 tag `v1.0.0` 發的）。之後發版見「專案約定」的發版
 - **知道但還沒改的**：
   - 匯入照片的那一兩秒轉螢幕：匯入跑在 `rememberCoroutineScope`，被取消，相機剛拍的暫存檔也刪掉了（`SnapMarkApp`）。
     「空白」連點兩下會開兩張作品也是同一段
@@ -148,8 +146,12 @@ Kotlin + Jetpack Compose 原生 App，在 claude.ai/code 雲端 session 開發�
 ### 作品
 
 - 「作品」分頁：縮圖的格線（`thumb.jpg`，`LazyVerticalStaggeredGrid`，每張照原本的比例，太細長的裁到 1:2），最近改過的在前面。
-  上面一句「點一下繼續改，長按可以刪除」。點一張打開繼續改；長按 → 刪除（要確認：「刪掉就找不回來了。」），資料夾整個刪掉。
-  存到相簿過、相簿裡還在的話，確認裡多一格「一併刪除存到相簿的 N 張圖」，**預設不勾**（使用者要的），
+  上面一句「點一下繼續改，長按可以選取、刪除」。點一張打開繼續改。
+  **多選刪除**（使用者要的）：長按一張開始多選（那一張先選起來），最上面那一排換成 ✕、「已選 N 張」、
+  全選（全部選到時是「取消全選」）、刪除；多選中點縮圖是選／取消選（左上角的圈打勾、外框變粗），不能左右滑、分頁列不能按，
+  ✕、返回鍵離開多選，一張都沒選就自己離開，轉螢幕時選到的留著。不另外做「全部清除」：全選再刪除就是。
+  刪除要確認（「刪除這張作品？」／「刪除這 N 張作品？」，「刪掉就找不回來了。」），資料夾整個刪掉。
+  存到相簿過、相簿裡還在的話，確認裡多一格「一併刪除存到相簿的 N 張圖」（選到的作品加起來），**預設不勾**（使用者要的），
   沒勾就說「存到相簿的圖會留著」。N 只算相簿裡還查得到的（使用者可能已經在相簿 App 刪掉了）。
   Android 10 以上 App 自己存的圖不用權限、系統也不再問就刪得掉；Android 9 用存的時候拿到的權限。
   刪不掉的（權限被收回去之類）提示「相簿裡有 N 張圖刪不掉，請到相簿 App 刪除」
@@ -171,7 +173,7 @@ Kotlin + Jetpack Compose 原生 App，在 claude.ai/code 雲端 session 開發�
 
 ### 先不做（要做之前先問使用者）
 
-作品的匯出／匯入與備份、資料夾或標籤、搜尋、多選刪除、顏色自訂（八色以外）、字型選擇、圖層順序調整、
+作品的匯出／匯入與備份、資料夾或標籤、搜尋、顏色自訂（八色以外）、字型選擇、圖層順序調整、
 平板的橫向版面、形狀辨識（手畫的圓自動變成橢圓）、自己做相機畫面（CameraX）。
 
 ### 還可以再討論的（要改之前先問使用者）
@@ -187,97 +189,63 @@ Kotlin + Jetpack Compose 原生 App，在 claude.ai/code 雲端 session 開發�
 
 ## 程式的分層
 
-- **規則都在純 Kotlin、有 JVM 測試**，不 import `android.*`、`androidx.compose.*`：
-  - `Markup`（已有）：標註的資料模型，`kotlinx.serialization` 存成 JSON。**座標一律是底圖的像素**，跟螢幕大小、縮放無關。
-    每個 `Node` 有 `scale`（預設 1，JSON 裡不寫）：粗細、字級、印章大小、馬賽克格子照長邊算完再乘它（裁切之後維持原本的像素大小）。
-    **要知道幾個像素一律用 `Selection.kt` 的 `lineWidth`／`fontSize`／`radius`／`labelTextSize`／`cell`**，不要直接呼叫 `StrokeSize.width`
-  - `Transform.kt`（`TransformTest`）：裁切（`Markup.cropped`：移到新的左上角、`scale` 乘上舊長邊／新長邊、框外的拿掉、馬賽克切成框裡那塊）、
-    旋轉（`Markup.rotated`：向右轉 (x, y) → (h - y, x)；文字繞著自己的中心轉、保持正的）、裁切範圍 `IntBox`
-  - `Crop.kt`（`CropTest`）：裁切畫面上的框（拉角、拖著走、重新拉、太小退回去、對齊整數像素的 `rect`）
-  - `WorkStore`（已有）：作品的資料表與檔案位置
-  - `Geometry.kt`（已有，`GeometryTest`）：箭頭的外形 `arrowOutline`、粗細的像素 `StrokeSize.width`（跟著底圖的長邊）、
-    縮放平移：`Zoom`（「剛好放進畫面」的幾倍＋畫面正中間對到底圖哪一點，跟螢幕大小無關，轉螢幕留得住）、
-    `CanvasFrame`（把圖放進畫面、兩指縮放平移、不能拖出畫面）、`Viewport`（螢幕座標 ↔ 底圖座標）、
-    底圖縮小 `fitWithin`（`BASE_MAX_SIDE` 4096）、馬賽克的格子 `mosaicBlock`／`mosaicGrid`（長邊的 1/48，對齊整張底圖）
-  - `Editor.kt`（已有，`EditorTest`）：編輯的狀態機 `Editor`（知道底圖大小；目前的工具與子選項 `shape`／`highlighter`／`stamp`、顏色、粗細，
-    這幾個合起來是 `ToolChoice`：預設 `ToolChoice.DEFAULT` 是筆，`remembered` 平移不記、`opening` 空白畫布不用馬賽克）。
-    手指按下／移動／放開 → 產生哪個 `Node`：`gesture` 記這次手勢有沒有拖動（超過 touch slop，換算成底圖像素傳進來），
-    `draft` 是手指還沒放開的那一個，放開才算一步。箭頭、形狀、筆要拖動才算；印章按下就出現、拖著走、放開蓋上去；
-    文字是點一下開始打字（`text: TextEdit`，按「完成」才加進 `Markup`）；馬賽克跟形狀一樣拉一個框，框拉不出底圖。
-    復原堆疊 `History`（存每一步之前的整份 `Sheet`＝標註＋大小＋底圖是哪個檔 `base`，最多 100 步）；
-    整張作品的 `clear`／`cropped`／`rotated`（底圖的新檔名由呼叫的人寫好再傳進來）
-    選取：`selected` 是選到的 id；按在選到的東西上是 `Grab.Move`（拖著走）、按在控制點上是 `Grab.Handle`（改大小／方向），
-    移動、改大小也先放在 `draft`，放開才寫進 `Markup`；點一下（`gesture.moved` 是 false）在 `tap` 裡決定選誰、取消選取、
-    開始打字、蓋印章；點兩下看 `lastTap`（`release` 傳進來的時間）
-  - `Selection.kt`（已有，`SelectionTest`）：點到哪一個（`Node.hit`、`topAt`，線條類的要點在線上，方框、橢圓的裡面不算）、
-    範圍（`Node.bounds`）、控制點（`Node.handles`／`withHandle`）、移動（`moved`）、改顏色粗細（`recolored`／`resized`）、
-    印章的字的位置（`labelAt`）。文字的大小要量字型：`TextMeasure` 介面，手機上是 `AndroidTextMeasure`（跟畫的同一套排版 `textLayout`），
-    JVM 測試是粗略估計的 `TextMeasure.APPROX`
-  - 這些是這個 App 最容易出錯的地方，全部要能在 JVM 測，不要寫在 Composable 裡
-- `WorkStore` 透過 `Sql` 介面存取資料庫：手機上是 `AndroidSql`（`databases/snapmark.db`），
-  JVM 測試是 `JdbcSql`（sqlite-jdbc 的記憶體資料庫，SQL 跑在真的 SQLite 上）。
-  **Android 9 的 SQLite 是 3.22**：不要用 UPSERT、window function、`VACUUM INTO`、`RETURNING` 這些新語法，
-  JVM 測試擋不下來，要靠 `DeviceTest` 在模擬器上跑
-- 資料表 `works`：主鍵是 UUID（也是 `filesDir/works/` 底下資料夾的名字）、`has_base`、`width`、`height`、`markup`（JSON）、
-  `created_at`、`updated_at`（epoch 毫秒）、`base_name`（底圖的檔名，預設 `base.jpg`；後來才加的欄位，舊的表在 `WorkStore` 的 init 用
-  `PRAGMA table_info` 判斷、`ALTER TABLE ... ADD COLUMN` 補上）。改 schema 時照這樣做，手機上已經有的資料不能丟。
-  裁切、旋轉：先寫好新的底圖 `base-<uuid>.jpg`，再用 `saveSheet` 一句 UPDATE 把標註、大小、`base_name` 一起換掉（中途被關掉也不會對不上）；
-  舊的底圖留給復原，離開畫布時 `removeUnusedBases`
-- 資料表 `gallery_images`：`work_id`、`uri`（存到相簿那張的 MediaStore 網址）、`saved_at`。一張作品存幾次就幾筆，刪作品時一起刪（同一個 transaction）。
-  新的表用 `CREATE TABLE IF NOT EXISTS`，舊的資料庫一樣建得起來
+每個檔案、函式在做什麼看程式與它上面的註解；這裡只寫規則與踩過的坑。
+
+### 純 Kotlin（規則都在這裡，有 JVM 測試）
+
+`Markup`、`Geometry.kt`、`Editor.kt`、`Selection.kt`、`Transform.kt`、`Crop.kt`、`Output.kt`、`WorkStore`、`Settings.kt`，各有同名的 `*Test`。
+
+- **不 import `android.*`、`androidx.compose.*`**。這些是最容易出錯的地方（幾何、編輯的狀態機、選取、復原、裁切旋轉、JSON），
+  全部要能在 JVM 測，不要寫在 Composable 裡
+- **座標一律是底圖的像素**，跟螢幕大小、縮放無關。螢幕座標 ↔ 底圖座標走 `Viewport`／`CanvasFrame`
+- **要知道幾個像素一律用 `Selection.kt` 的 `lineWidth`／`fontSize`／`radius`／`labelTextSize`／`cell`**，不要直接呼叫 `StrokeSize.width`：
+  每個 `Node` 有 `scale`（預設 1，JSON 裡不寫），裁切之後舊的標註靠它維持原本的像素大小
 - **`Markup` 的 JSON 發版之後就是要長期相容的格式**：加欄位一律給預設值（舊的 JSON 讀得回來），不改名字、不改意思；
   `Node` 的 `@SerialName` 不能改（`MarkupTest` 有每一種寫死的 JSON，跟著改字串就是破壞相容）
-- 要碰 Android 的放在薄薄一層：`AndroidSql`、底圖的轉正縮小與畫成品圖（`Bitmap`，`DeviceTest` 測）、畫面 `*Screen.kt`、
-  整個 App 的導覽在 `SnapMarkApp`（sealed interface 的 Route ＋ `rememberSaveable` 的 stack，不另外引入 Navigation 套件），
-  共用的東西在 `AppContainer`（`SnapMarkApplication.container`）
-  - `BaseImage.kt`（`DeviceTest` 測）：`decodeBase` 用 ImageDecoder 讀圖（照 EXIF 轉正、`setTargetSize` 一邊讀一邊縮、sRGB、透明墊白）、
-    `writeJpeg`（先寫暫存檔再改名；Bitmap.compress 寫出來的 JPEG 沒有 EXIF，GPS 不會帶過來）、
-    `AppContainer.importPhoto`（相機、照片共用：讀圖 → 建作品 → 寫 `base.jpg`，寫不進去就刪掉作品）、
-    `BaseLayer`（畫布上的底圖＋整張先打碎好的馬賽克，一格一個像素；格子大小不一樣（裁切前畫的）各打碎一份，`prepare` 在背景先算好）、
-    `cropBitmap`／`rotateBitmap`（裁切、轉 90 度，回傳新的一張，舊的那張留給復原）
-  - `Output.kt`（純 Kotlin，`OutputTest`）：成品圖的格式 `OutputFormat`（照片 JPEG、空白 PNG）、檔名 `outputName`（同一秒的加 `-2`）、
-    縮圖的大小 `THUMB_MAX_SIDE`
-  - `Render.kt`（`DeviceTest` 測）：`renderWork` 畫成品圖（跟底圖一樣大，用 `MarkupPainter`）、`Thumbnailer` 畫縮圖
-    （底圖先用 `halveDownTo` 縮到比縮圖大一點，馬賽克借原圖的 `BaseLayer.mosaic`——格子是照原圖切的）
-  - `Export.kt`：`saveToGallery`（Android 10 以上 MediaStore、Android 9 寫檔案＋`MediaScannerConnection`）、`writeShareFile`（`cacheDir/share/`）、
-    `shareChooser`、刪作品時用的 `galleryImageExists`／`deleteFromGallery`（Android 9 MediaStore 那一筆刪掉之後檔案還在的話自己刪）。都在背景執行緒。
-    `AppContainer.galleryImagesOf`（還在相簿裡的）、`deleteWork`（先刪相簿的再刪作品，回傳刪不掉的張數）
-  - `PhotoSources.kt`：首頁兩個入口接系統的相機 App（`TakePicture`，照片寫到 `cacheDir/camera/`，`FileProvider` 的 authority 是
-    `<applicationId>.files`，路徑在 `res/xml/file_paths.xml`）與照片挑選器（`PickVisualMedia`），還有「用其他 App 選」
-    （`GetImageFromApp`：`GetContent` 包一層 `Intent.createChooser`）。**不宣告 `CAMERA` 權限**。
-    不看相機 App 回傳的成功與否，暫存檔有內容就是拍到了
-  - `MarkupPainter`：把作品畫到 `android.graphics.Canvas`（座標是底圖像素）。畫面上由 `CanvasScreen` 用 `drawIntoCanvas`
-    套上 `Viewport` 再呼叫；畫成品圖、縮圖也用它（同一份程式，看到的跟存出來的才一樣）。印章的樣子在 `StampArt`（工具選單的圖示也用它）。
-    首頁的示意圖（`HomeArt.kt`）用 `drawNodes`：只畫標註、不畫底圖。
-    正在打的字不經過它：`CanvasScreen` 在文字的位置放一個 `BasicTextField`，按「完成」之後才由它畫成卡通字。
-    影子：實心的（箭頭、印章）用 `setShadowLayer`；框線、筆畫用 `drawWithShadow`（幾圈越來越粗的半透明黑線，不模糊）——
-    硬體繪圖替空心的框線做模糊會畫壞（Android 9 模擬器上看到的），要加新的框線類標註也照這樣畫。
-    底圖與馬賽克：有 `BaseLayer` 就畫照片（不然是白色），馬賽克是在框裡貼上 `BaseLayer.mosaic` 放大回去的樣子，
-    打碎的是底圖本身（蓋在之前畫的標註上面時標註也被蓋掉）。**Android 9 起 `Paint()` 預設會內插圖片**：
-    要格子是方的（馬賽克）要明講 `isFilterBitmap = false`
-  - `CanvasSession`：一次打開畫布的期間（`Editor`、`Zoom`、展開的選單、底圖 `base`——跟作品一起讀好才顯示，不會先白一下）。
-    存到相簿、分享：`export(Export.SAVE / SHARE)` 在背景畫成品圖，好了從 `exported`（Channel，轉螢幕時新的畫面也收得到）通知畫面提示或開分享選單。
-    裁切、旋轉：`transform` 在背景做出新的底圖、寫檔，再一起換掉 `editor` 與 `base`（作品現在的大小看 `editor.width`／`height`，不是 `work`）；
-    復原、重做換到另一張底圖時先讀回來（`bases` 留著最近兩張）；`crop` 是裁切中的框。存檔排的是整份 `Sheet` 與它的 `Thumbnailer`。`CanvasScreen` 用 Compose 的 `retain` 拿著：
-    轉螢幕留著、離開畫布就丟掉（所以復原只記這一次）。自動存檔用 `Channel.CONFLATED` 排隊，只有 `Markup` 真的變了才存（拖動時改的是 `draft`，不存）；
-    按返回時 `finish()`：存完最後一次，`Route.Canvas.isNew` 的作品沒畫東西就刪掉
-  - **畫的時候的效能**（`PerfTest` 量）：
-    - 手指移動時 `editor` 每一格都換一個新的。`CanvasScreen` 不在組畫面時讀整個 `editor`，只讀 `CanvasUi`（`derivedStateOf`：
-      按鈕、輸入框、泡泡要看的那幾樣），沒變就不重組；要畫的在 `DrawingSurface` 畫的階段才讀。要加新的按鈕時，把它要看的值加進 `CanvasUi`，
-      不要在 `CanvasScreen` 直接讀 `session.editor`
-    - `DrawingSurface` 分兩層（`Editor.drawLayers`）：底圖與手指移動時不會變的（正在畫、拖著走的那一個底下的，`CanvasSession.settledNodes`）
-      放在 `CompositingStrategy.Offscreen` 的圖層，畫成一張圖留著；正在畫的那一個與蓋在它上面的、選取框、裁切框每一格重畫
-      （`MarkupPainter.drawOnPage`，不畫底圖）。兩層合起來的順序跟 `visibleNodes` 一樣（`EditorTest`），預覽逐像素比對過沒有變
-  - `AppContainer.worksDispatcher`：作品的讀寫一律排在這一條（一次一件、照順序），剛離開畫布馬上再打開同一張，讀到的一定是存完的；
-    `background` 是離開畫面之後還要做完的事（最後一次存檔、刪除）；`worksRevision` 在 `WorkStore` 每次寫入後加一，首頁看著它重讀
-    （只在首頁看得到的時候讀：在畫布上每畫一筆就存一次，那時候重讀每一張的標註是白做工，還跟存檔排在同一條上）。
-    首頁的縮圖用 Coil（`AsyncImage`），`memoryCacheKey` 帶著 `updatedAt`：存過一次就換 key，不會拿到記憶體裡舊的那張
+- `Editor`：手指還沒放開的那一個（新畫的、移動、改大小）放在 `draft`，放開才寫進 `Markup`、才算復原的一步
+- 文字的大小要量字型：`TextMeasure` 介面，手機上是 `AndroidTextMeasure`（跟畫的同一套排版），JVM 測試是粗略估計的 `TextMeasure.APPROX`
+
+### 資料庫與檔案
+
+- `WorkStore` 透過 `Sql` 介面存取資料庫：手機上是 `AndroidSql`（`databases/snapmark.db`），JVM 測試是 `JdbcSql`（sqlite-jdbc 的記憶體資料庫）。
+  **Android 9 的 SQLite 是 3.22**：不要用 UPSERT、window function、`VACUUM INTO`、`RETURNING` 這些新語法，
+  JVM 測試擋不下來，要靠 `DeviceTest` 在模擬器上跑
+- 資料表 `works`（主鍵 UUID，也是 `filesDir/works/` 底下資料夾的名字）、`gallery_images`（存到相簿的每一張，刪作品時同一個 transaction 一起刪）
+- **改 schema 時手機上已經有的資料不能丟**：新的表用 `CREATE TABLE IF NOT EXISTS`；加欄位照 `base_name` 的做法，
+  在 `WorkStore` 的 init 用 `PRAGMA table_info` 判斷、`ALTER TABLE ... ADD COLUMN` 補上
+- 裁切、旋轉：先寫好新的底圖 `base-<uuid>.jpg`，再用 `saveSheet` 一句 UPDATE 把標註、大小、`base_name` 一起換掉（中途被關掉也不會對不上）；
+  舊的底圖留給復原，離開畫布時 `removeUnusedBases`
+- 資料庫與檔案一律在 `Dispatchers.IO`，不要在組畫面時讀資料庫、解圖片
+- `AppContainer.worksDispatcher`：**作品的讀寫一律排在這一條**（一次一件、照順序），剛離開畫布馬上再打開同一張，讀到的一定是存完的；
+  `background` 是離開畫面之後還要做完的事（最後一次存檔、刪除）
+- `worksRevision` 在 `WorkStore` 每次寫入後加一，首頁看著它重讀——只在首頁看得到的時候讀（在畫布上每畫一筆就存一次）。
+  縮圖的 Coil `memoryCacheKey` 帶著 `updatedAt`，不然會拿到記憶體裡舊的那張
+
+### 碰 Android 的薄薄一層
+
+`AndroidSql`、`BaseImage.kt`（讀底圖、馬賽克的 `BaseLayer`）、`Render.kt`（成品圖、縮圖）、`Export.kt`（相簿、分享）、`PhotoSources.kt`（相機、挑選器）、
+`MarkupPainter`、`CanvasSession`、畫面 `*Screen.kt`。導覽在 `SnapMarkApp`（sealed interface 的 Route ＋ `rememberSaveable` 的 stack，
+不另外引入 Navigation 套件），共用的東西在 `AppContainer`（`SnapMarkApplication.container`）。底圖、成品圖、裁切旋轉由 `DeviceTest` 測。
+
+- **畫標註的程式只有一份 `MarkupPainter`**（畫到 `android.graphics.Canvas`，座標是底圖像素）：畫面、成品圖、縮圖、首頁的示意圖都用它，
+  看到的跟存出來的才一樣。正在打的字不經過它（`CanvasScreen` 放一個 `BasicTextField`，按「完成」之後才由它畫）
+- 影子：實心的（箭頭、印章）用 `setShadowLayer`；框線、筆畫用 `drawWithShadow`（幾圈越來越粗的半透明黑線，不模糊）——
+  硬體繪圖替空心的框線做模糊會畫壞。要加新的框線類標註也照這樣畫
+- **Android 9 起 `Paint()` 預設會內插圖片**：要格子是方的（馬賽克）要明講 `isFilterBitmap = false`
+- 馬賽克打碎的是底圖本身，格子對齊整張底圖；格子大小不一樣的（裁切前畫的）各打碎一份。縮圖的馬賽克借原圖的 `BaseLayer.mosaic`（格子是照原圖切的）
 - 在 `canvas.withClip { }`、`withTranslation { }` 這種以 `Canvas` 為 receiver 的 lambda 裡，`width`／`height` 是 `Canvas.getWidth()`（畫面的大小），
   不是外面 class 的屬性：`MarkupPainter` 因此把底圖大小叫 `imageWidth`／`imageHeight`
-- 資料庫與檔案一律在 `Dispatchers.IO`，不要在組畫面時讀資料庫、解圖片
-- 顯示圖片用 Coil（只有 `coil-compose`，讀本機檔案與 `content://`，沒有接網路層）：目前只有作品分頁的縮圖
-- 設定（`Settings.kt`）：`EnumSetting` 把 enum 的名字存進 SharedPreferences `settings`，`value` 是 Compose 的狀態（`SettingsTest`）。
-  `ToolMemory`（`AppContainer.tools`）：上次用的工具、顏色、粗細，`CanvasSession` 打開畫布時套上、選了就 `remember`
+- 底圖：`writeJpeg` 先寫暫存檔再改名；`Bitmap.compress` 寫出來的 JPEG 沒有 EXIF，GPS 不會帶過來
+- 相機：不看相機 App 回傳的成功與否，暫存檔有內容就是拍到了。`FileProvider` 的 authority 是 `<applicationId>.files`
+- `CanvasSession`：`CanvasScreen` 用 Compose 的 `retain` 拿著——轉螢幕留著、離開畫布就丟掉（所以復原只記這一次）。
+  作品現在的大小看 `editor.width`／`height`，不是 `work`（裁切、旋轉會變）。存到相簿、分享的結果從 `exported`（Channel）通知，轉螢幕時新的畫面也收得到。
+  自動存檔用 `Channel.CONFLATED` 排隊，只有 `Markup` 真的變了才存（拖動時改的是 `draft`，不存）
+- **畫的時候的效能**（`PerfTest` 量）：
+  - 手指移動時 `editor` 每一格都換一個新的。**不要在 `CanvasScreen` 組畫面時直接讀 `session.editor`**，只讀 `CanvasUi`（`derivedStateOf`）；
+    要加新的按鈕時，把它要看的值加進 `CanvasUi`
+  - `DrawingSurface` 分兩層（`Editor.drawLayers`）：底圖與手指移動時不會變的畫成一張圖留著（`CompositingStrategy.Offscreen`），
+    正在畫的那一個與蓋在它上面的、選取框、裁切框每一格重畫。兩層合起來的順序要跟 `visibleNodes` 一樣（`EditorTest`）
+- 顯示圖片用 Coil（只有 `coil-compose`，沒有接網路層）；設定存在 SharedPreferences `settings`（`EnumSetting`、`ToolMemory`）
 
 ## 專案約定
 
@@ -331,7 +299,7 @@ Kotlin + Jetpack Compose 原生 App，在 claude.ai/code 雲端 session 開發�
   `Could not resolve <group>:<artifact>:<version>` 或 `Configuration cache state could not be cached`，
   加 `--info` 才看得到底下的 `HTTP 429`。新 session 第一次 build 看到這幾種，先重跑，不要去改版本
 - VM 的網路只放行套件庫。App 本身不連網，不受影響
-- Maven Central 偶爾會對共用出口 IP 回很長的 `retry-after`（例如 80 分鐘）：只能等，不要改用鏡像（權限檢查會擋「轉向別的下載來源」）。
+- Maven Central 偶爾會對共用出口 IP 回很長的 `retry-after`：只能等，不要改用鏡像（權限檢查會擋「轉向別的下載來源」）。
   等的時候可以先把要新下載的依賴拿掉，用已經在快取裡的東西繼續做
 
 ## 畫面預覽（Robolectric，VM 內就看得到畫面）
@@ -342,8 +310,8 @@ Kotlin + Jetpack Compose 原生 App，在 claude.ai/code 雲端 session 開發�
 ./gradlew testDebugUnitTest -Ppreview --tests '*PreviewTest'
 ```
 
-- 為什麼是選用的：Robolectric 畫圖用的 `nativeruntime-dist-compat` jar 有 150 MB，雲端 VM 的共用 IP 下載它常被 Maven Central 限流
-  （遇過 `retry-after` 19 小時）。沒有 `-Ppreview` 時 build、JVM 測試、CI 都碰不到 Robolectric，不會被它卡住
+- 為什麼是選用的：Robolectric 畫圖用的 `nativeruntime-dist-compat` jar 有 150 MB，雲端 VM 的共用 IP 下載它常被 Maven Central 限流。
+  沒有 `-Ppreview` 時 build、JVM 測試、CI 都碰不到 Robolectric，不會被它卡住
 - 預覽的測試放在 `app/src/preview/java`（只有 `-Ppreview` 才加進 test 的 source set），繼承 `PreviewTest`
   （它的 `@Before` 把工具設成箭頭，流程從箭頭開始畫；第一次是筆、記住上次的在 `ToolMemoryPreviewTest`）：
   `createAndroidComposeRule<MainActivity>()` 開 App，用 testTag 點（跟 `DemoRecordingTest` 同一套），
@@ -391,20 +359,13 @@ CI 錄影前也會跑 `testDebugUnitTest`，沒過就不會錄影（失敗原因
   `record.sh` 測試還在跑就接著錄下一段（`demo-1.mp4`、`demo-2.mp4`…），`record.yml` 用 ffmpeg 接起來（段跟段之間少不到一秒），
   所以長度不受限；但影片是給人看的，盡量 3 分鐘內，別的測試已經測到的重複操作不用放
 - 用 `By.text(...)` 找元件；要用 testTag 時用 `By.res(...)`（`SnapMarkApp` 的 root 已經開了 `testTagsAsResourceId`）。
-  目前的 testTag：分頁 `tab_camera`／`tab_photos`／`tab_blank`／`tab_works`、按鈕 `camera_button`／`photos_button`／`blank_button`（圓形大按鈕）、照片頁的「用其他 App 選」`photos_other_app`、
-  首頁右上角的深色模式 `theme_button` 與展開後的 `theme_system`／`theme_light`／`theme_dark`（`ThemeMode.tag`）、
-  `work_list`（作品分頁的格線）與每一張縮圖 `work_<id>`（說明文字是「照片／空白畫布，N 個標註」：用 `By.descContains("N 個標註")` 找）、
-  長按之後的確認 `delete_confirm`／`delete_cancel` 與「一併刪除存到相簿的圖」那一格 `delete_gallery`（有存過相簿才有）、
-  `canvas`（畫圖、接手勢的整塊區域，作品放在它正中間）、`canvas_back`、畫布右上角的 `save_button`（存到相簿）／`share_button`、
-  存到相簿之後作品分頁下面的提示 `saved_snackbar`（「繼續改」用 `By.text("繼續改")` 找）、
-  `more_button`（⋮）與展開後的 `menu_crop`／`menu_rotate_right`／`menu_rotate_left`／`menu_clear`、裁切時上面的 `crop_cancel`／`crop_done`、
-  畫成品圖時蓋住畫面的 `exporting`、裁切旋轉時的 `transforming`、`undo`／`redo`（有東西可以復原／重做時才有）、
-  `tool_button` 與展開後的 `tool_<工具>`（`Tool.tag`，例如 `tool_arrow`、`tool_pan`；`tool_pixelate` 只有照片的作品才有）、
-  `color_button` 與展開後的 `color_<顏色>`（`MarkupColor.tag`，例如 `color_blue`）、`size_<粗細>`（`StrokeSize.tag`，例如 `size_xl`）、
-  工具的子選項 `shape_<形狀>`（`ShapeKind.tag`）、`pen_marker`／`pen_highlighter`（`penTag()`）、`stamp_<印章>`（`StampKind.tag`）
-  （形狀、筆、印章要先點一下 `tool_<工具>` 才會展開子選項）、打字的輸入框 `text_field` 與上面的 `text_done`（完成）、
-  選到東西時右上角的 `delete`、選到文字時泡泡上的 `bubble_cartoon`／`bubble_plain`、選到印章時的 `bubble_tail`／`bubble_label`、
-  讀照片時蓋住整個畫面的 `importing`
+  testTag 用 `rg 'testTag\('` 查（`app/src/main`），有規則的：`tab_<分頁>`、`<入口>_button`、`work_<id>`、`tool_<工具>`（`Tool.tag`）、
+  `color_<顏色>`（`MarkupColor.tag`）、`size_<粗細>`（`StrokeSize.tag`）、`shape_<形狀>`、`stamp_<印章>`、`theme_<設定>`、`menu_<項目>`、
+  多選的 `select_*`、刪除確認的 `delete_*`、泡泡的 `bubble_*`。查不出來的：
+  - 作品的縮圖用說明文字找：`By.descContains("N 個標註")`；多選選了幾張用 `By.text("已選 N 張")`，縮圖選到沒有看 `isSelected`
+  - 「繼續改」用 `By.text("繼續改")` 找
+  - `tool_pixelate` 只有照片的作品才有；形狀、筆、印章要先點一下 `tool_<工具>` 才會展開子選項
+  - `undo`／`redo`／`delete`、`delete_gallery` 有東西可以按時才出現；蓋住畫面的 `importing`／`exporting`／`transforming` 做完就消失
 - **點在已經畫好的東西上是選取它**（任何工具都是）：要畫新的、蓋印章、開始打字，要點在空白的地方，
   有東西選著時先點一下空白取消選取。座標要算好跟已經畫好的東西隔開（手指點得到的距離大約是 20dp）
 - **在畫布上畫東西用座標**：`device.swipe(x1, y1, x2, y2, steps)` 拉箭頭、`device.click(x, y)` 蓋印章；
@@ -450,13 +411,12 @@ CI 錄影前也會跑 `testDebugUnitTest`，沒過就不會錄影（失敗原因
 - 系統相機：`record.yml` 的模擬器開了 `-camera-back emulated`（假的鏡頭畫面）。相機 App 的權限先用 `pm grant` 給好，
   第一次打開的提示、快門、確認的按鈕每個版本不一樣，看得到哪個點哪個（`CAMERA_*` 的 selector）；
   真的接不起來就只測「拍完之後」那一段（測試自己放一張圖到那個暫存檔）
-  模擬器的假鏡頭偶爾連不上（遇過一次：相機 App 自己跳「Can't connect to the camera」，前後幾次都正常）：
-  看到 `CAMERA_ERROR` 就關掉、退回首頁再拍一次（`systemui-3-camera-error.png`），第二次還是連不上才算失敗
+  模擬器的假鏡頭偶爾連不上：看到 `CAMERA_ERROR` 就關掉、退回首頁再拍一次（`systemui-3-camera-error.png`），第二次還是連不上才算失敗
 - 取消：挑選器、相機打開後按返回鍵，回到首頁，沒有多出作品，相機的暫存檔刪掉了
 - 存到相簿：Android 9 先跳系統問權限的對話框（`UiTest.allowStorageIfAsked` 按允許）；存完用 shell 查 MediaStore（`UiTest.savedInGallery`），
   多出一張在 `Pictures/SnapMark/`、檔名對、跟底圖一樣大；回到作品分頁有「已存到相簿」，「繼續改」打開同一張。測完用 `_id` 刪掉
 - 分享：系統的分享選單打得開（只看選單出來、`cacheDir/share/` 有那張 PNG，按返回回到畫布）
-- 刪作品時一併刪除相簿的圖：存一張（自己回到作品分頁）→ 長按 → `delete_gallery` 預設不勾、寫「1 張」→ 勾 → 刪除，
+- 刪作品時一併刪除相簿的圖：存一張（自己回到作品分頁）→ 長按 → `select_delete` → `delete_gallery` 預設不勾、寫「1 張」→ 勾 → 刪除，
   MediaStore 查不到、檔案也不在了（`systemui-12-delete-with-gallery.png`）
 - `UiTest.shell` 不經過 sh：指令照空白切開，引號原封不動傳過去。SQL 裡不要有空白（寫成 `--where _id=12`、`--where _display_name='a.jpg'`）
 
@@ -467,16 +427,8 @@ CI 錄影前也會跑 `testDebugUnitTest`，沒過就不會錄影（失敗原因
 再用分兩層的畫法，各用筆畫 4 筆；每一筆花多久（UiAutomator 拉一筆要等 App 處理完每一下，卡的話會拖很久）與 `dumpsys gfxinfo`
 的總格數、卡頓的格數、各百分位的時間存成 `screenshots/perf.txt`（每畫完一筆就先存一次，被 timeout 停掉也留得下）。
 **不判斷快慢**（模擬器是軟體繪圖，跟手機差很多，沒過也不會讓 job 失敗）。不同次的 CI 跑在不同的機器上，數字只在同一次裡比。
-筆畫再多（60 條、每條 120 點、拉一筆 120 步）的話，改之前的畫法在模擬器上 5 分鐘還畫不完 8 筆，會被 timeout 停掉。
-Android 9 模擬器上量到的：
-
-| | 每一筆（60 步） | 每一格的中位數 | 主執行緒太慢的格數 | 送繪圖指令太慢的格數 |
-| --- | --- | --- | --- | --- |
-| 改之前（一層） | 約 23.5 秒 | 300 ms | 203 / 488 | 488 / 488 |
-| 分兩層 | 約 12.1 秒 | 150 ms | 0 / 486 | 0 / 486 |
-
-App 這邊（主執行緒、送繪圖指令）已經不慢了，剩下的 150 ms 是模擬器用軟體（swiftshader）合成整個畫面，手機的 GPU 不會這麼慢。
-還沒在真的手機上量過
+筆畫不要再加多：改之前的畫法在模擬器上會畫到被 timeout 停掉。分兩層之後 App 這邊（主執行緒、送繪圖指令）已經不慢，
+剩下的是模擬器用軟體合成整個畫面。還沒在真的手機上量過
 
 ## release 冒煙測試
 
@@ -520,24 +472,15 @@ R8 壓過的程式只有 release 版跑得到：之後每做一個會用到函�
    - `/tmp/media/segments.txt`：接起來的錄影段（每段最多 180 秒）
    - `/tmp/media/demo.mp4`：接起來、壓縮後的影片（給使用者看）
 
-模擬器偶爾會自己掛掉（遇過一次：`DemoRecordingTest` 通過後 20 秒，job log 先是 `adb: device offline` 再變成
-`device 'emulator-5554' not found`，後面每一段都空的、連截圖都沒有，logcat 也沒有閃退）：不是 App 的問題，
-用 GitHub MCP 的 `actions_run_trigger`（`rerun_failed_jobs`）重跑，重跑就全部通過。同一個地方又掉才往程式找原因。
+模擬器偶爾會自己掛掉（job log 有 `adb: device offline`、`device 'emulator-5554' not found`，後面每一段都空的）：不是 App 的問題，
+用 GitHub MCP 的 `actions_run_trigger`（`rerun_failed_jobs`）重跑。同一個地方又掉才往程式找原因。
 
 看完 frames 確認畫面正常後，把 `/tmp/media/demo.mp4` 複製到 session 的 scratchpad 目錄，
 用 SendUserFile（`display: render`）直接傳給使用者，讓使用者不用 pull 就能播放。傳之前先核對 `info.txt` 的 commit 是這次的。
 
 ## README 的截圖與 GIF
 
-`docs/images/`：都從 CI 的 `media` branch 來（Android 9 模擬器）。畫面改了要換時照這樣重做：
-
-- 截圖：`/tmp/media/screenshots/` 的 `00-camera`（→ `home`）、`10-all-tools`（→ `tools`）、`08-tool-picker`（→ `tool-menu`）、
-  `04-color-picker`（→ `colors`）、`13-mosaic`（→ `mosaic`）、`13c-crop`（→ `crop`）、`14-saved`（→ `saved`）、`01b-dark`（→ `dark`），
-  `convert <來源> -resize 300x -strip -define png:compression-level=9 docs/images/<名字>.png`
-- `demo.gif`：`demo.mp4` 剪幾段（首頁與深色模式、箭頭與顏色、選取、形狀／筆／文字／印章、照片打馬賽克、裁切、存到相簿 → 作品分頁 → 繼續改；
-  Android 9 問權限的系統對話框剪掉），每段 `trim` 之後 `setpts=(PTS-STARTPTS)/4` 加速 4 倍、`concat`，
-  再 `fps=8,scale=300:-1`、`palettegen=max_colors=128:stats_mode=diff`／`paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle`。
-  45 秒、約 2 MB。錄影每次長度不一樣，先用每 5 秒一張的影格對好時間再剪
+`docs/images/`，都從 CI 的 `media` branch 來。畫面改了要換時照 `docs/readme-media.md` 重做。
 
 ## 環境設定
 

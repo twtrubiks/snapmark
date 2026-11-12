@@ -15,7 +15,7 @@ import org.robolectric.RobolectricTestRunner
 import java.io.File
 import java.nio.ByteBuffer
 
-/** 輸出的畫面：作品分頁的縮圖格線、長按刪除、畫布右上角的存到相簿、分享。截圖說明見 [PreviewTest]。 */
+/** 輸出的畫面：作品分頁的縮圖格線、長按多選刪除、畫布右上角的存到相簿、分享。截圖說明見 [PreviewTest]。 */
 @RunWith(RobolectricTestRunner::class)
 class OutputPreviewTest : PreviewTest() {
     @Test
@@ -42,8 +42,17 @@ class OutputPreviewTest : PreviewTest() {
         settle()
         shot("01-grid")
 
-        // 長按空白畫布那一張 → 確認 → 刪掉（資料夾一起）
+        // 長按空白畫布那一張開始多選 → 全選 → 點照片那一張取消選它
         compose.onNodeWithTag("work_${blank.id}").performTouchInput { longClick() }
+        waitTag("select_all")
+        compose.onNodeWithTag("select_all").performClick()
+        settle()
+        shot("01b-select-all")
+        compose.onNodeWithTag("work_${photo.id}").performClick()
+        settle()
+        shot("01c-select-one")
+        // 刪除 → 確認 → 刪掉（資料夾一起）
+        compose.onNodeWithTag("select_delete").performClick()
         waitTag("delete_confirm")
         compose.onNodeWithTag("delete_confirm").performClick()
         // 資料庫那一筆刪掉之後才刪資料夾：兩個都等

@@ -294,8 +294,19 @@ class DemoRecordingTest : UiTest() {
         pause(1500)
         screenshot("15-works-grid")
 
-        // 長按空白畫布那一張 → 確認刪除 → 只剩照片那一張
+        // 多選：長按空白畫布那一張 → 最上面變成「已選 1 張」→ 全選（兩張）→ 點照片那一張取消選它
         waitFor(By.descContains("6 個標註")).longClick()
+        waitFor(By.text("已選 1 張"))
+        pause(1000)
+        find(By.res("select_all")).click()
+        waitFor(By.text("已選 2 張"))
+        pause(1000)
+        screenshot("15b-select-all")
+        find(By.res("work_${photo.id}")).click()
+        waitFor(By.text("已選 1 張"))
+        pause(1000)
+        // 刪除 → 確認 → 只剩照片那一張，多選自己結束
+        find(By.res("select_delete")).click()
         waitFor(By.res("delete_confirm"))
         pause(1200)
         screenshot("16-delete")
